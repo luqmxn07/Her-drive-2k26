@@ -87,5 +87,29 @@
     },
     "security_scan": "PASS",
     "stable": true
+  },
+  {
+    "date": "2026-09-24",
+    "time": "20:48",
+    "timezone": "Asia/Kolkata",
+    "commit_message": "feat: implement live Neon PostgreSQL and Upstash Redis waitlist API integration",
+    "summary": "Connected waitlist form to real Neon PostgreSQL database and Upstash Redis rate limiting via /api/waitlist with auto-schema creation",
+    "files_changed": [
+      "app/api/waitlist/route.ts",
+      "lib/db.ts",
+      "lib/redis.ts",
+      "components/sections/Waitlist.tsx",
+      "package.json",
+      "package-lock.json",
+      "docs/CHANGELOG.md",
+      "docs/commit-history.json"
+    ],
+    "validation": {
+      "build": "PASS",
+      "lint": "PASS",
+      "tests": "N/A"
+    },
+    "security_scan": "PASS",
+    "stable": true
   }
 ]

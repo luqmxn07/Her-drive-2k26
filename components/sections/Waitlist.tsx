@@ -40,17 +40,53 @@ export const Waitlist: React.FC = () => {
     return Object.keys(errs).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
 
     setIsSubmitting(true);
 
-    // Simulate serverless endpoint request
-    setTimeout(() => {
+    try {
+      const baseUrl = process.env.NEXT_PUBLIC_API_URL || "";
+      const endpoint = baseUrl ? `${baseUrl.replace(/\/$/, "")}/api/waitlist` : "/api/waitlist";
+
+      const res = await fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (res.ok && data.success) {
+        setIsSubmitted(true);
+      } else {
+        setErrors({
+          email: data.error || "Unable to register on the waitlist. Please try again.",
+        });
+      }
+    } catch (err: any) {
+      console.error("Waitlist submission network error:", err);
+      // Fallback to relative /api/waitlist in case of CORS or endpoint misconfiguration
+      try {
+        const fallbackRes = await fetch("/api/waitlist", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        });
+        const fallbackData = await fallbackRes.json();
+        if (fallbackRes.ok && fallbackData.success) {
+          setIsSubmitted(true);
+          return;
+        }
+      } catch (_) {}
+
+      setErrors({
+        email: "Unable to reach registration server. Please check your network and try again.",
+      });
+    } finally {
       setIsSubmitting(false);
-      setIsSubmitted(true);
-    }, 800);
+    }
   };
 
   return (

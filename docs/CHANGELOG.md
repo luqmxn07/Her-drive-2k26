@@ -4,6 +4,18 @@ All notable changes to the HERDRIVE platform are documented in this file.
 
 ## 2026-09-24
 
+### feat: implement live Neon PostgreSQL and Upstash Redis waitlist API integration
+
+Time: 20:48 IST
+
+Changes:
+- Added `@neondatabase/serverless` and `ioredis` drivers
+- Created `lib/db.ts` with automated Neon database schema initialization (auto-creates `waitlist_entries` table and unique lowercase email index)
+- Created `lib/redis.ts` for Upstash Redis rate limiting and real-time submission counters
+- Implemented `app/api/waitlist/route.ts` with CORS handling, duplicate validation, and data persistence
+- Replaced simulated waitlist timeout in `components/sections/Waitlist.tsx` with live `fetch` calls to `/api/waitlist`
+- Verified end-to-end build (Turbopack) and route generation
+
 ### feat: add light and dark theme mode with dynamic logo switching
 
 Time: 17:05 IST
