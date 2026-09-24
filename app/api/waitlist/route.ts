@@ -5,13 +5,16 @@ import { checkRateLimit, getRedis } from "@/lib/redis";
 function getCorsHeaders(req: NextRequest) {
   const origin = req.headers.get("origin") || "";
   const allowedOrigins = [
+    "https://her-drive-2k26.vercel.app",
     "https://herdrive-2k26.vercel.app",
     "http://localhost:3000",
     process.env.FRONTEND_URL || "",
   ].filter(Boolean);
 
-  const isAllowed = allowedOrigins.some((allowed) => origin.startsWith(allowed));
-  const allowOrigin = isAllowed ? origin : allowedOrigins[0] || "*";
+  const isAllowed =
+    allowedOrigins.some((allowed) => origin.startsWith(allowed)) ||
+    (origin.endsWith(".vercel.app") && (origin.includes("her-drive") || origin.includes("herdrive")));
+  const allowOrigin = isAllowed ? origin : (origin || "*");
 
   return {
     "Access-Control-Allow-Origin": allowOrigin,
@@ -156,6 +159,7 @@ export async function POST(req: NextRequest) {
         ${cleanEmail},
         ${cleanPhone},
         ${cleanRole},
+        'waitlisted',
         ${Boolean(consent)},
         NOW()
       )
