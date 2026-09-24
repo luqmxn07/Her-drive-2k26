@@ -1,7 +1,7 @@
 # HERDRIVE — ANTIGRAVITY PROJECT CONTEXT
 
 Last Updated: 2026-09-24
-Current Development Status: Frontend V3 Visual Brand & Color System Update Completed
+Current Development Status: Secure Admin Portal + Full-Stack Backend Foundation Completed
 
 ---
 
@@ -14,49 +14,51 @@ Purpose:
 A ride-sharing platform focused on empowering women on the move, prioritizing safety, community, and tailored experiences for female drivers and passengers.
 
 Current Goal:
-Develop and deploy the initial public landing page to build a waitlist and communicate the value proposition, followed by expanding into the full web application backend.
+Operate public marketing landing page to acquire waitlist registrations, backed by Neon PostgreSQL and Upstash Redis, alongside a completely isolated, secure internal Admin Portal with RBAC, session management, and waitlist management.
 
 Project Stage:
-Frontend V3 (Complete Visual Brand Identity with new icons, soft pink + lavender + purple + deep plum palette, and full Light/Dark support)
+Production-Ready Landing Page + Secure Admin Console Foundation (RBAC, JWT HttpOnly sessions, Upstash brute-force guard, Neon persistent audit logs and admin credentials, zero public links)
 
 ---
 
 # 2. CURRENT DEVELOPMENT STATE
 
 Overall Status:
-The frontend landing page has been fully updated to the V3 brand identity with the official HERDRIVE assets, centralized design tokens, and synchronized light and dark themes.
+The public HERDRIVE website is visually finalized and live with Neon PostgreSQL waitlist persistence and Upstash Redis rate limiting. A separate, secure internal Admin Portal (`/admin-portal` with `admin.<domain>` subdomain routing support) has been implemented and tested.
 
 Working Features:
-- Fully responsive Next.js landing page (12 sections)
-- Light / Dark theme toggle with localStorage persistence
-- Official brand assets from `icons/`:
-  - Default Light Theme uses `/brand/her-drive-light.png`
-  - Dark Theme uses `/brand/her-drive-dark.png`
-  - Social & OG banner uses `/brand/her-drive-banner.png`
-- Centralized token system: Soft Pink (#F472B6), Rose Pink (#FB7185), Purple (#7C3AED, #A855F7), Lavender (#EDE9FE), Deep Plum (#0F0524, #1E0B3D), Warm White (#FAF9F7)
-- Navigation bar with responsive desktop/mobile theme switcher
-- Hero section
-- Problem & Solution sections
-- Driver & Passenger Experience sections
-- How It Works section
-- Safety Features section (SOS slider, etc.)
-- Community section
-- Waitlist signup UI (simulated client-side with DPDP Act consent)
-- Footer with dynamic logo and social links
+- **Public Landing Page**:
+  - Fully responsive Next.js landing page (12 sections)
+  - V3 Visual Brand Identity (Light / Dark theme support, official assets)
+  - Live waitlist signup via `/api/waitlist` with Neon PostgreSQL persistence and duplicate protection
+  - Upstash Redis rate limiting and real-time counter tracking
+  - DPDP Act consent compliance
+  - Zero admin references in public navbar, footer, or sitemap
+- **Secure Admin Portal**:
+  - Isolated Admin Console at `/admin-portal` (supporting dedicated `admin.<domain>` routing via `middleware.ts`)
+  - Minimal, security-hardened Admin Login (no sign-up, no forgot password, generic 401 errors)
+  - Password hashing with bcryptjs (cost factor 12)
+  - Authenticated sessions using signed JWTs in `HttpOnly`, `Secure`, `SameSite=Lax` cookies
+  - Upstash Redis brute-force protection (5 failed attempts trigger 15-minute IP/account lockout)
+  - Server-side Role-Based Access Control (RBAC: `SUPER_ADMIN`, `ADMIN`, `VIEWER`)
+  - Neon PostgreSQL persistent admin storage (`admin_users`, `admin_audit_logs`, `waitlist_entries`)
+  - Admin APIs: `/api/admin/auth/*`, `/api/admin/waitlist/*`, `/api/admin/stats`, `/api/admin/audit-logs`, `/api/admin/users`
+  - Admin Dashboard Console with aggregate metrics, status charts, 14-day histogram, and waitlist table with search, filter, pagination, notes, and status updates
+  - Immutable Audit Logging for administrative actions with password/credential redaction
+  - Server-side CLI provisioning script (`scripts/create-admin.mjs`) for manual admin creation
+  - Strict security headers (`X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`, `Cache-Control: no-store`)
 
 Incomplete Features:
-- Backend API routes
-- Database integration (Neon/Upstash)
-- Functional waitlist submission (currently UI only)
+- Live driver ride dispatch / mobile apps (Future Roadmap)
 
 Currently In Progress:
-- Transitioning from static landing page to full-stack architecture
+- Admin Portal deployment and initial SUPER_ADMIN provisioning
 
 Blocked Items:
-- None currently
+- None
 
 Known Problems:
-- Waitlist form does not yet save data to a database
+- None
 
 ---
 
@@ -70,21 +72,19 @@ Frontend:
 - Lucide React (Icons)
 - TypeScript
 
-Backend:
-- Planned: Node.js/Next.js API routes (Pending implementation)
+Backend & Security:
+- Next.js Server Components & Route Handlers
+- bcryptjs (Work factor 12)
+- jose (Signed JWT authentication)
+- Security Middleware (Subdomain rewriting, session validation, route guards)
 
 Database:
-- Planned: Neon (PostgreSQL)
-- Planned: Upstash (Redis/Kafka)
-
-APIs:
-- None currently
-
-Authentication:
-- Planned
+- Neon (Serverless PostgreSQL) — Admin accounts, password hashes, waitlist records, audit logs
+- Upstash (Serverless Redis) — Login rate limiting, brute-force lockout, temporary caches
 
 Hosting:
-- Planned: Vercel (Frontend), Render (Backend)
+- Vercel (Public website / Admin Portal)
+- Render (API backend services / alternative full-stack host)
 
 ---
 

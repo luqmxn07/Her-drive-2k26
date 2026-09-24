@@ -4,6 +4,49 @@ All notable changes to the HERDRIVE platform are documented in this file.
 
 ## 2026-09-24
 
+### feat: add secure HERDRIVE admin portal foundation
+
+Time: 23:25 IST
+
+Changes:
+- **Architecture & Isolation**:
+  - Isolated Admin Portal foundation at `/admin-portal` with native subdomain rewrite support (`admin.<domain>`) via `middleware.ts`.
+  - Zero links or mentions on public HERDRIVE website, navbar, footer, marketing sections, or public sitemaps.
+  - Browser-to-database direct access strictly forbidden; all traffic flows through authenticated API guards.
+- **Authentication & RBAC Foundation**:
+  - Server-side password hashing using `bcryptjs` (cost factor 12) with zero plaintext credential persistence.
+  - No public registration, sign-up, or forgot password endpoints.
+  - Generic authentication errors (`"Invalid credentials."`) preventing user enumeration.
+  - Secure signed session tokens via `jose` stored in `HttpOnly`, `Secure`, `SameSite=Lax` cookies.
+  - 3-tier Role-Based Access Control (`SUPER_ADMIN`, `ADMIN`, `VIEWER`) enforced server-side on all admin API routes.
+- **Brute-Force & Attack Protection**:
+  - Upstash Redis login rate limiting and failed attempt tracking (5 failed attempts trigger 15-minute lockout).
+  - Memory-safe fallbacks for resilient development.
+  - Automatic IP and account lockouts with generic error feedback.
+- **Neon PostgreSQL Schemas & Storage**:
+  - `admin_users`: ID, email, password_hash, first_name, last_name, role, is_active, last_login_at, created_at, updated_at.
+  - `admin_audit_logs`: ID, admin_id, admin_email, action, resource_type, resource_id, metadata (auto-sanitized, passwords/tokens redacted), ip_address, user_agent, created_at.
+  - `waitlist_entries`: Enhanced with optional `notes` column for operational follow-ups.
+- **Admin APIs & Management**:
+  - `POST /api/admin/auth/login`: Throttled authentication, JWT issuance, audit event.
+  - `POST /api/admin/auth/logout`: Session cookie revocation, audit event.
+  - `GET /api/admin/auth/me`: Current session inspection (passwords/hashes stripped).
+  - `GET /api/admin/waitlist`: RBAC-protected waitlist query with search, role filter, status filter, and pagination.
+  - `GET` & `PATCH /api/admin/waitlist/[id]`: Status and internal notes updates (SUPER_ADMIN and ADMIN only; VIEWER gets 403).
+  - `GET /api/admin/stats`: Aggregate KPIs (passengers, drivers, conversion rates, 14-day histogram).
+  - `GET /api/admin/audit-logs`: Paginated audit log stream with metadata inspector.
+  - `GET /api/admin/users`: Operator management for SUPER_ADMIN.
+- **Admin Console UI**:
+  - Minimal, distraction-free Admin Login screen matching enterprise HERDRIVE brand tokens.
+  - Admin Dashboard Overview with live stat cards, status breakdown chart, and 14-day velocity graph.
+  - Waitlist Management Console with search, multi-filter pills, CSV export, and status update drawer.
+  - Audit Log Explorer with raw JSON event metadata inspector.
+  - Role-protected System Settings & RBAC hierarchy matrix.
+- **CLI Provisioning Tool**:
+  - `scripts/create-admin.mjs`: Server-side script for initial project owner operator provisioning with secure prompts.
+- **Documentation**:
+  - Created `HERDRIVE_ADMIN_SECURITY.md` covering architecture, security boundary, schema diagrams, RBAC policies, and runbooks.
+
 ### feat: update HERDRIVE frontend with new brand identity
 
 Time: 22:42 IST
