@@ -22,12 +22,12 @@ export const Badge: React.FC<BadgeProps> = ({
     "inline-flex items-center gap-1.5 font-medium rounded-full tracking-wide";
 
   const variants = {
-    violet: "bg-[#7C3AED]/10 text-[#7C3AED] border border-[#7C3AED]/20",
+    violet: "bg-[#7C3AED]/10 text-[#7C3AED] dark:text-[#EDE9FE] border border-[#7C3AED]/20",
     plum: "bg-[#211827] text-white border border-white/10",
-    green: "bg-emerald-500/10 text-emerald-700 border border-emerald-500/20",
-    lavender: "bg-[#EDE9FE] text-[#7C3AED] border border-[#7C3AED]/20",
-    emergency: "bg-[#DC2626]/10 text-[#DC2626] border border-[#DC2626]/30",
-    neutral: "bg-gray-100 text-gray-700 border border-gray-200",
+    green: "bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20",
+    lavender: "bg-[#EDE9FE] dark:bg-[#7C3AED]/20 text-[#7C3AED] dark:text-[#EDE9FE] border border-[#7C3AED]/20",
+    emergency: "bg-[#DC2626]/10 text-[#DC2626] dark:text-red-400 border border-[#DC2626]/30",
+    neutral: "bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-white/10",
   };
 
   const sizes = {

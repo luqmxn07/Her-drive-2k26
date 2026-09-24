@@ -3,13 +3,15 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight, Sun, Moon } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { useTheme } from "@/context/ThemeContext";
 import { cn } from "@/lib/utils";
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,13 +39,13 @@ export const Navbar: React.FC = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-[#FAF9F7]/90 backdrop-blur-md shadow-sm border-b border-[#211827]/10 py-3"
+          ? "bg-[#FAF9F7]/90 dark:bg-[#211827]/90 backdrop-blur-md shadow-sm border-b border-[#211827]/10 dark:border-white/10 py-3"
           : "bg-transparent py-5"
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Brand Logo with Official App Icon */}
+          {/* Brand Logo with Dynamic Light/Dark App Icon */}
           <Link
             href="#hero"
             className="flex items-center gap-2.5 group focus:outline-none focus:ring-2 focus:ring-[#7C3AED] rounded-xl p-1"
@@ -51,19 +53,19 @@ export const Navbar: React.FC = () => {
           >
             <div className="w-10 h-10 rounded-xl overflow-hidden shadow-md ring-1 ring-[#7C3AED]/30 group-hover:scale-105 transition-transform duration-200 shrink-0">
               <Image
-                src="/brand/herdrive icon dark.png"
+                src={theme === "dark" ? "/brand/herdrive icon dark.png" : "/brand/herdrive icon light.png"}
                 alt="HERDRIVE"
                 width={40}
                 height={40}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-opacity duration-300"
                 priority
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-extrabold text-xl tracking-tight text-[#211827] font-manrope">
+              <span className="font-extrabold text-xl tracking-tight text-[#211827] dark:text-white font-manrope">
                 HERDRIVE
               </span>
-              <span className="text-[10px] font-bold text-[#7C3AED] tracking-wider uppercase -mt-1">
+              <span className="text-[10px] font-bold text-[#7C3AED] dark:text-[#EDE9FE] tracking-wider uppercase -mt-1">
                 Women Mobility
               </span>
             </div>
@@ -75,15 +77,28 @@ export const Navbar: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm font-semibold text-[#242124]/80 hover:text-[#7C3AED] transition-colors py-1 focus:outline-none focus:ring-2 focus:ring-[#7C3AED] rounded-md"
+                className="text-sm font-semibold text-[#242124]/80 dark:text-gray-300 hover:text-[#7C3AED] dark:hover:text-[#EDE9FE] transition-colors py-1 focus:outline-none focus:ring-2 focus:ring-[#7C3AED] rounded-md"
               >
                 {link.name}
               </a>
             ))}
           </nav>
 
-          {/* Right Action CTA */}
-          <div className="hidden md:flex items-center gap-4">
+          {/* Right Action CTA & Theme Switcher */}
+          <div className="hidden md:flex items-center gap-3">
+            <button
+              onClick={toggleTheme}
+              className="p-2.5 rounded-xl border border-gray-200 dark:border-white/10 bg-white/80 dark:bg-white/5 text-[#242124] dark:text-[#EDE9FE] hover:bg-[#EDE9FE] dark:hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-[#7C3AED] cursor-pointer"
+              aria-label={theme === "dark" ? "Switch to light theme" : "Switch to dark theme"}
+              title={theme === "dark" ? "Switch to light theme" : "Switch to dark theme"}
+            >
+              {theme === "dark" ? (
+                <Sun className="w-4 h-4 text-amber-300" />
+              ) : (
+                <Moon className="w-4 h-4 text-[#7C3AED]" />
+              )}
+            </button>
+
             <a href="#waitlist">
               <Button size="sm" variant="primary" className="gap-2 shadow-md shadow-[#7C3AED]/20">
                 Join Waitlist
@@ -92,18 +107,30 @@ export const Navbar: React.FC = () => {
             </a>
           </div>
 
-          {/* Mobile Hamburger Button */}
-          <div className="flex md:hidden">
+          {/* Mobile Actions: Theme Switcher & Hamburger */}
+          <div className="flex md:hidden items-center gap-2">
+            <button
+              onClick={toggleTheme}
+              className="p-2.5 rounded-xl border border-gray-200 dark:border-white/10 bg-white/80 dark:bg-white/5 text-[#242124] dark:text-[#EDE9FE] hover:bg-[#EDE9FE] dark:hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-[#7C3AED] min-w-[44px] min-h-[44px] flex items-center justify-center cursor-pointer"
+              aria-label={theme === "dark" ? "Switch to light theme" : "Switch to dark theme"}
+            >
+              {theme === "dark" ? (
+                <Sun className="w-5 h-5 text-amber-300" />
+              ) : (
+                <Moon className="w-5 h-5 text-[#7C3AED]" />
+              )}
+            </button>
+
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2.5 rounded-xl bg-white border border-gray-200 text-[#211827] hover:bg-[#EDE9FE] focus:outline-none focus:ring-2 focus:ring-[#7C3AED] min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors"
+              className="p-2.5 rounded-xl bg-white dark:bg-[#17111F] border border-gray-200 dark:border-white/10 text-[#211827] dark:text-white hover:bg-[#EDE9FE] dark:hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-[#7C3AED] min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors"
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileMenuOpen}
             >
               {mobileMenuOpen ? (
                 <X className="w-6 h-6 text-[#7C3AED]" />
               ) : (
-                <Menu className="w-6 h-6 text-[#211827]" />
+                <Menu className="w-6 h-6 text-[#211827] dark:text-white" />
               )}
             </button>
           </div>

@@ -22,7 +22,7 @@ export const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="relative pt-28 sm:pt-36 pb-20 md:pb-28 overflow-hidden bg-gradient-to-b from-[#EDE9FE]/50 via-[#FAF9F7] to-[#FAF9F7]"
+      className="relative pt-28 sm:pt-36 pb-20 md:pb-28 overflow-hidden bg-gradient-to-b from-[#EDE9FE]/50 via-[#FAF9F7] to-[#FAF9F7] dark:from-[#211827] dark:via-[#1A1322] dark:to-[#17111F] transition-colors duration-300"
     >
       {/* Decorative background glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#7C3AED]/10 blur-[130px] rounded-full pointer-events-none" />
@@ -37,15 +37,15 @@ export const Hero: React.FC = () => {
             className="lg:col-span-7 space-y-6 sm:space-y-8 text-center lg:text-left"
           >
             {/* Top Pill Announcement */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#EDE9FE] text-[#7C3AED] border border-[#7C3AED]/25 shadow-xs text-xs sm:text-sm font-bold tracking-wide">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#EDE9FE] dark:bg-[#7C3AED]/20 text-[#7C3AED] dark:text-[#EDE9FE] border border-[#7C3AED]/25 shadow-xs text-xs sm:text-sm font-bold tracking-wide">
               <Sparkles className="w-4 h-4 text-[#7C3AED]" />
               <span>Next-Gen Women Mobility Platform</span>
               <span className="w-1.5 h-1.5 rounded-full bg-[#7C3AED]" />
-              <span className="text-[#211827]">Launching Soon</span>
+              <span className="text-[#211827] dark:text-gray-200">Launching Soon</span>
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#242124] tracking-tight font-manrope leading-[1.15]">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#242124] dark:text-white tracking-tight font-manrope leading-[1.15]">
               Move Freely. <br className="hidden sm:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7C3AED] to-[#5B21B6]">
                 Ride Confidently.
@@ -53,7 +53,7 @@ export const Hero: React.FC = () => {
             </h1>
 
             {/* Subhead / Supporting Copy */}
-            <p className="text-lg sm:text-xl text-[#6B7280] max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            <p className="text-lg sm:text-xl text-[#6B7280] dark:text-gray-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
               A women-focused mobility platform built around safety, comfort, trust, and opportunity.
             </p>
 
@@ -74,7 +74,7 @@ export const Hero: React.FC = () => {
             </div>
 
             {/* Trust Badges */}
-            <div className="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-y-2 gap-x-6 text-xs sm:text-sm font-semibold text-[#6B7280]">
+            <div className="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-y-2 gap-x-6 text-xs sm:text-sm font-semibold text-[#6B7280] dark:text-gray-400">
               <span className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-[#7C3AED]" />
                 Launching soon

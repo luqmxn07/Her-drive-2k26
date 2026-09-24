@@ -3,10 +3,13 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useTheme } from "@/context/ThemeContext";
 
 export const Footer: React.FC = () => {
+  const { theme } = useTheme();
+
   return (
-    <footer className="bg-[#211827] text-white pt-16 pb-12 border-t border-white/10">
+    <footer className="bg-[#211827] dark:bg-[#17111F] text-white pt-16 pb-12 border-t border-white/10 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Brand Info with Official App Icon */}
@@ -14,11 +17,11 @@ export const Footer: React.FC = () => {
             <Link href="#hero" className="flex items-center gap-3 group">
               <div className="w-10 h-10 rounded-xl overflow-hidden shadow-md ring-1 ring-[#7C3AED]/40 group-hover:scale-105 transition-transform duration-200 shrink-0">
                 <Image
-                  src="/brand/herdrive icon dark.png"
+                  src={theme === "dark" ? "/brand/herdrive icon dark.png" : "/brand/herdrive icon light.png"}
                   alt="HERDRIVE Logo"
                   width={40}
                   height={40}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-opacity duration-300"
                 />
               </div>
               <span className="font-extrabold text-2xl tracking-tight text-white font-manrope">

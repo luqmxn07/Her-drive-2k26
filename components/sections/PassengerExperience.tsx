@@ -29,7 +29,7 @@ export const PassengerExperience: React.FC = () => {
   ];
 
   return (
-    <section id="passenger" className="py-20 md:py-28 bg-[#FAF9F7] relative">
+    <section id="passenger" className="py-20 md:py-28 bg-[#FAF9F7] dark:bg-[#17111F] relative transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Column: Text Content */}
@@ -40,22 +40,22 @@ export const PassengerExperience: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="lg:col-span-6 space-y-6 text-left"
           >
-            <span className="text-xs font-bold tracking-widest text-[#7C3AED] uppercase bg-[#EDE9FE] px-3.5 py-1.5 rounded-full border border-[#7C3AED]/20">
+            <span className="text-xs font-bold tracking-widest text-[#7C3AED] dark:text-[#EDE9FE] uppercase bg-[#EDE9FE] dark:bg-[#7C3AED]/20 px-3.5 py-1.5 rounded-full border border-[#7C3AED]/20">
               Passenger App Experience
             </span>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#242124] font-manrope tracking-tight leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#242124] dark:text-white font-manrope tracking-tight leading-tight">
               Designed Around the Passenger.
             </h2>
 
-            <p className="text-base sm:text-lg text-[#6B7280] leading-relaxed">
+            <p className="text-base sm:text-lg text-[#6B7280] dark:text-gray-300 leading-relaxed">
               Experience reliable, stress-free transit with verified women drivers, upfront pricing, Ride PIN verification, and integrated emergency support at your fingertips.
             </p>
 
             {/* Checkmark List */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
               {benefits.map((benefit, idx) => (
-                <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#242124]">
+                <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#242124] dark:text-gray-200">
                   <CheckCircle2 className="w-4 h-4 text-[#7C3AED] shrink-0 mt-0.5" />
                   <span className="font-medium">{benefit}</span>
                 </div>

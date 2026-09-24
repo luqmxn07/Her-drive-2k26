@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { useTheme } from "@/context/ThemeContext";
 
 interface PhoneMockupProps {
   children: React.ReactNode;
@@ -17,6 +18,7 @@ export const PhoneMockup: React.FC<PhoneMockupProps> = ({
   theme = "light",
   className,
 }) => {
+  const { theme: currentTheme } = useTheme();
   return (
     <div
       className={cn(
@@ -48,7 +50,7 @@ export const PhoneMockup: React.FC<PhoneMockupProps> = ({
           <div className="flex items-center gap-2">
             <div className="relative w-5 h-5 rounded-md overflow-hidden ring-1 ring-[#7C3AED]/40 shadow-xs">
               <Image
-                src="/brand/herdrive icon dark.png"
+                src={currentTheme === "dark" ? "/brand/herdrive icon dark.png" : "/brand/herdrive icon light.png"}
                 alt="HERDRIVE App"
                 width={20}
                 height={20}

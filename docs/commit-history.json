@@ -62,5 +62,30 @@
     },
     "security_scan": "PASS",
     "stable": true
+  },
+  {
+    "date": "2026-09-24",
+    "time": "17:05",
+    "timezone": "Asia/Kolkata",
+    "commit_message": "feat: add light and dark theme mode with dynamic logo switching",
+    "summary": "Light and Dark theme toggle with dynamic logo swapping (herdrive icon light.png for light mode default, herdrive icon dark.png for dark mode) and complementary dark palette",
+    "files_changed": [
+      "context/ThemeContext.tsx",
+      "app/globals.css",
+      "app/layout.tsx",
+      "app/page.tsx",
+      "components/sections/*",
+      "components/ui/*",
+      "ANTIGRAVITY_CONTEXT.md",
+      "docs/CHANGELOG.md",
+      "docs/commit-history.json"
+    ],
+    "validation": {
+      "build": "PASS",
+      "lint": "PASS",
+      "tests": "N/A"
+    },
+    "security_scan": "PASS",
+    "stable": true
   }
 ]

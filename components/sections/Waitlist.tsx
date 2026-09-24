@@ -54,26 +54,26 @@ export const Waitlist: React.FC = () => {
   };
 
   return (
-    <section id="waitlist" className="py-20 md:py-28 bg-[#EDE9FE] relative">
+    <section id="waitlist" className="py-20 md:py-28 bg-[#EDE9FE] dark:bg-[#1A1322] relative transition-colors duration-300">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="bg-[#FAF9F7] rounded-3xl p-8 sm:p-12 shadow-2xl border border-[#7C3AED]/20 relative overflow-hidden"
+          className="bg-[#FAF9F7] dark:bg-[#211827] rounded-3xl p-8 sm:p-12 shadow-2xl border border-[#7C3AED]/20 dark:border-white/10 relative overflow-hidden transition-colors duration-300"
         >
           {/* Header */}
           <div className="text-center space-y-4 max-w-2xl mx-auto mb-10">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EDE9FE] text-[#7C3AED] text-xs font-bold uppercase tracking-wider border border-[#7C3AED]/20">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EDE9FE] dark:bg-[#7C3AED]/20 text-[#7C3AED] dark:text-[#EDE9FE] text-xs font-bold uppercase tracking-wider border border-[#7C3AED]/20">
               <Sparkles className="w-3.5 h-3.5" /> Early Access Priority
             </div>
 
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#242124] font-manrope tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#242124] dark:text-white font-manrope tracking-tight">
               Be Part of the Next Generation of Safer Mobility.
             </h2>
 
-            <p className="text-sm sm:text-base text-[#6B7280] leading-relaxed">
+            <p className="text-sm sm:text-base text-[#6B7280] dark:text-gray-300 leading-relaxed">
               HERDRIVE is being built for women who want to move, work, and earn with greater confidence. Join our priority waitlist today.
             </p>
           </div>
@@ -82,7 +82,7 @@ export const Waitlist: React.FC = () => {
             <form onSubmit={handleSubmit} className="space-y-6 max-w-xl mx-auto" noValidate>
               {/* Name Field */}
               <div className="space-y-1.5">
-                <label htmlFor="waitlist-name" className="text-xs font-bold text-[#242124] uppercase tracking-wider block">
+                <label htmlFor="waitlist-name" className="text-xs font-bold text-[#242124] dark:text-gray-200 uppercase tracking-wider block">
                   Full Name <span className="text-[#DC2626]">*</span>
                 </label>
                 <input
@@ -92,8 +92,8 @@ export const Waitlist: React.FC = () => {
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className={`w-full px-4 py-3 rounded-xl border ${
-                    errors.name ? "border-[#DC2626] ring-1 ring-[#DC2626]" : "border-gray-300 focus:border-[#7C3AED] focus:ring-2 focus:ring-[#7C3AED]/20"
-                  } bg-white text-[#242124] placeholder-gray-400 text-sm outline-none transition-all`}
+                    errors.name ? "border-[#DC2626] ring-1 ring-[#DC2626]" : "border-gray-300 dark:border-white/15 focus:border-[#7C3AED] focus:ring-2 focus:ring-[#7C3AED]/20"
+                  } bg-white dark:bg-[#17111F] text-[#242124] dark:text-white placeholder-gray-400 dark:placeholder-gray-500 text-sm outline-none transition-all`}
                 />
                 {errors.name && (
                   <p className="text-xs text-[#DC2626] font-medium flex items-center gap-1">
@@ -105,7 +105,7 @@ export const Waitlist: React.FC = () => {
               {/* Email & Phone Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-1.5">
-                  <label htmlFor="waitlist-email" className="text-xs font-bold text-[#242124] uppercase tracking-wider block">
+                  <label htmlFor="waitlist-email" className="text-xs font-bold text-[#242124] dark:text-gray-200 uppercase tracking-wider block">
                     Email Address <span className="text-[#DC2626]">*</span>
                   </label>
                   <input
@@ -115,8 +115,8 @@ export const Waitlist: React.FC = () => {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className={`w-full px-4 py-3 rounded-xl border ${
-                      errors.email ? "border-[#DC2626] ring-1 ring-[#DC2626]" : "border-gray-300 focus:border-[#7C3AED] focus:ring-2 focus:ring-[#7C3AED]/20"
-                    } bg-white text-[#242124] placeholder-gray-400 text-sm outline-none transition-all`}
+                      errors.email ? "border-[#DC2626] ring-1 ring-[#DC2626]" : "border-gray-300 dark:border-white/15 focus:border-[#7C3AED] focus:ring-2 focus:ring-[#7C3AED]/20"
+                    } bg-white dark:bg-[#17111F] text-[#242124] dark:text-white placeholder-gray-400 dark:placeholder-gray-500 text-sm outline-none transition-all`}
                   />
                   {errors.email && (
                     <p className="text-xs text-[#DC2626] font-medium flex items-center gap-1">
@@ -126,7 +126,7 @@ export const Waitlist: React.FC = () => {
                 </div>
 
                 <div className="space-y-1.5">
-                  <label htmlFor="waitlist-phone" className="text-xs font-bold text-[#242124] uppercase tracking-wider block">
+                  <label htmlFor="waitlist-phone" className="text-xs font-bold text-[#242124] dark:text-gray-200 uppercase tracking-wider block">
                     Phone Number <span className="text-gray-400 font-normal">(Optional)</span>
                   </label>
                   <input
@@ -135,14 +135,14 @@ export const Waitlist: React.FC = () => {
                     placeholder="+91 98765 43210"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#7C3AED] focus:ring-2 focus:ring-[#7C3AED]/20 bg-white text-[#242124] placeholder-gray-400 text-sm outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-white/15 focus:border-[#7C3AED] focus:ring-2 focus:ring-[#7C3AED]/20 bg-white dark:bg-[#17111F] text-[#242124] dark:text-white placeholder-gray-400 dark:placeholder-gray-500 text-sm outline-none transition-all"
                   />
                 </div>
               </div>
 
               {/* Role Selection Radio Pill Buttons */}
               <div className="space-y-2">
-                <span className="text-xs font-bold text-[#242124] uppercase tracking-wider block">
+                <span className="text-xs font-bold text-[#242124] dark:text-gray-200 uppercase tracking-wider block">
                   I am interested as:
                 </span>
                 <div className="grid grid-cols-3 gap-3">
@@ -154,7 +154,7 @@ export const Waitlist: React.FC = () => {
                       className={`py-2.5 px-3 rounded-xl text-xs font-bold capitalize transition-all border ${
                         formData.role === r
                           ? "bg-[#7C3AED] text-white border-[#7C3AED] shadow-md"
-                          : "bg-white text-[#242124] border-gray-200 hover:bg-[#EDE9FE]"
+                          : "bg-white dark:bg-[#17111F] text-[#242124] dark:text-gray-200 border-gray-200 dark:border-white/10 hover:bg-[#EDE9FE] dark:hover:bg-[#7C3AED]/20"
                       }`}
                     >
                       {r}
@@ -220,12 +220,12 @@ export const Waitlist: React.FC = () => {
               <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto shadow-md">
                 <CheckCircle2 className="w-10 h-10" />
               </div>
-              <h3 className="text-2xl font-bold text-[#242124] font-manrope">
+              <h3 className="text-2xl font-bold text-[#242124] dark:text-white font-manrope">
                 Thank You for Joining!
               </h3>
-              <p className="text-sm text-[#6B7280] leading-relaxed">
+              <p className="text-sm text-[#6B7280] dark:text-gray-300 leading-relaxed">
                 You've been added to the priority HERDRIVE waitlist as a{" "}
-                <span className="font-bold text-[#7C3AED] capitalize">{formData.role}</span>. We will contact you at <span className="font-semibold text-[#242124]">{formData.email}</span> as soon as early access opens in your city.
+                <span className="font-bold text-[#7C3AED] dark:text-[#EDE9FE] capitalize">{formData.role}</span>. We will contact you at <span className="font-semibold text-[#242124] dark:text-white">{formData.email}</span> as soon as early access opens in your city.
               </p>
               <div className="pt-4">
                 <Button

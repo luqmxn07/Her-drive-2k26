@@ -13,7 +13,7 @@ import { Footer } from "@/components/sections/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col bg-[#F8F7F5] overflow-x-hidden">
+    <main className="min-h-screen flex flex-col bg-[#F8F7F5] dark:bg-[#17111F] overflow-x-hidden transition-colors duration-300">
       {/* 1. Sticky Navbar */}
       <Navbar />
 

@@ -62,20 +62,20 @@ export const Solution: React.FC = () => {
   ];
 
   return (
-    <section id="solution" className="py-20 md:py-28 bg-[#EDE9FE]/30 relative overflow-hidden">
+    <section id="solution" className="py-20 md:py-28 bg-[#EDE9FE]/30 dark:bg-[#211827] relative overflow-hidden transition-colors duration-300">
       {/* Background graphic elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#7C3AED]/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span className="text-xs font-bold tracking-widest text-[#7C3AED] uppercase bg-white px-3.5 py-1.5 rounded-full border border-[#7C3AED]/20 shadow-xs">
+          <span className="text-xs font-bold tracking-widest text-[#7C3AED] dark:text-[#EDE9FE] uppercase bg-white dark:bg-white/10 px-3.5 py-1.5 rounded-full border border-[#7C3AED]/20 shadow-xs">
             Our Approach
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#242124] font-manrope tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#242124] dark:text-white font-manrope tracking-tight">
             Built Around What Matters.
           </h2>
-          <p className="text-base sm:text-lg text-[#6B7280]">
+          <p className="text-base sm:text-lg text-[#6B7280] dark:text-gray-300">
             HERDRIVE replaces traditional ride-hailing uncertainty with a holistic four-pillar framework designed specifically for women.
           </p>
         </div>
@@ -101,16 +101,16 @@ export const Solution: React.FC = () => {
                       <div className="w-14 h-14 rounded-2xl bg-[#211827] text-[#EDE9FE] flex items-center justify-center font-bold shadow-md">
                         <IconComponent className="w-7 h-7 text-[#7C3AED]" />
                       </div>
-                      <span className="text-xs font-bold text-[#7C3AED] bg-[#EDE9FE] px-3 py-1 rounded-full border border-[#7C3AED]/20">
+                      <span className="text-xs font-bold text-[#7C3AED] dark:text-[#EDE9FE] bg-[#EDE9FE] dark:bg-[#7C3AED]/20 px-3 py-1 rounded-full border border-[#7C3AED]/20">
                         {pillar.subtitle}
                       </span>
                     </div>
 
                     <div className="space-y-2">
-                      <h3 className="text-2xl font-bold text-[#242124] font-manrope">
+                      <h3 className="text-2xl font-bold text-[#242124] dark:text-white font-manrope">
                         {pillar.title}
                       </h3>
-                      <p className="text-base text-[#6B7280] leading-relaxed">
+                      <p className="text-base text-[#6B7280] dark:text-gray-300 leading-relaxed">
                         {pillar.description}
                       </p>
                     </div>
@@ -118,8 +118,8 @@ export const Solution: React.FC = () => {
                     {/* Bullet Highlights */}
                     <div className="pt-2 space-y-2.5">
                       {pillar.bullets.map((bullet, i) => (
-                        <div key={i} className="flex items-center gap-2 text-sm text-[#242124]">
-                          <div className="w-4 h-4 rounded-full bg-[#7C3AED]/10 text-[#7C3AED] flex items-center justify-center shrink-0">
+                        <div key={i} className="flex items-center gap-2 text-sm text-[#242124] dark:text-gray-200">
+                          <div className="w-4 h-4 rounded-full bg-[#7C3AED]/10 dark:bg-[#7C3AED]/30 text-[#7C3AED] dark:text-[#EDE9FE] flex items-center justify-center shrink-0">
                             <Check className="w-3 h-3 stroke-[3]" />
                           </div>
                           <span>{bullet}</span>

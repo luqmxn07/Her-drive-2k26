@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-plum: #211827;
   --color-plum-dark: #17111F;
@@ -30,6 +32,11 @@
 :root {
   --background: #FAF9F7;
   --foreground: #242124;
+}
+
+.dark {
+  --background: #211827;
+  --foreground: #FAF9F7;
 }
 
 html {

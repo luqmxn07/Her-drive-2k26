@@ -58,6 +58,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { ThemeProvider } from "@/context/ThemeContext";
+
 export default function RootLayout({
   children,
 }: {
@@ -68,8 +70,10 @@ export default function RootLayout({
       lang="en"
       className={`${manrope.variable} ${inter.variable} scroll-smooth antialiased`}
     >
-      <body className="min-h-screen bg-[#FAF9F7] text-[#242124] font-sans selection:bg-[#7C3AED] selection:text-white flex flex-col">
-        {children}
+      <body className="min-h-screen bg-[#FAF9F7] text-[#242124] dark:bg-[#211827] dark:text-[#FAF9F7] font-sans selection:bg-[#7C3AED] selection:text-white flex flex-col transition-colors duration-300">
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -1,7 +1,7 @@
 # HERDRIVE — ANTIGRAVITY PROJECT CONTEXT
 
 Last Updated: 2026-09-24
-Current Development Status: Frontend V2 Visual Polish (Deployed to Vercel)
+Current Development Status: Frontend V2 Visual Polish + Light/Dark Theme Switcher (Deployed to Vercel)
 
 ---
 
@@ -17,26 +17,30 @@ Current Goal:
 Develop and deploy the initial public landing page to build a waitlist and communicate the value proposition, followed by expanding into the full web application backend.
 
 Project Stage:
-Prototype / MVP (Frontend Landing Page completed)
+Prototype / MVP (Frontend Landing Page completed with Light/Dark Theme support)
 
 ---
 
 # 2. CURRENT DEVELOPMENT STATE
 
 Overall Status:
-The static frontend landing page (MVP) has been successfully built and pushed to GitHub. No backend or database is currently integrated.
+The static frontend landing page (MVP/V2) has been successfully built and pushed to GitHub with dynamic Light and Dark theme switching. No backend or database is currently integrated.
 
 Working Features:
 - Fully responsive Next.js landing page
-- Navigation bar
+- Light / Dark theme toggle with localStorage persistence
+- Dynamic logo switching:
+  - Default Light Theme uses `/brand/herdrive icon light.png`
+  - Dark Theme uses `/brand/herdrive icon dark.png`
+- Navigation bar with responsive desktop/mobile theme switcher
 - Hero section
 - Problem & Solution sections
 - Driver & Passenger Experience sections
 - How It Works section
 - Safety Features section (SOS slider, etc.)
 - Community section
-- Waitlist signup UI
-- Footer
+- Waitlist signup UI (simulated client-side with DPDP Act consent)
+- Footer with dynamic logo and social links
 
 Incomplete Features:
 - Backend API routes

@@ -46,17 +46,17 @@ export const Problem: React.FC = () => {
   ];
 
   return (
-    <section id="problem" className="py-20 md:py-28 bg-[#FAF9F7] relative">
+    <section id="problem" className="py-20 md:py-28 bg-[#FAF9F7] dark:bg-[#17111F] relative transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span className="text-xs font-bold tracking-widest text-[#7C3AED] uppercase bg-[#EDE9FE] px-3.5 py-1.5 rounded-full border border-[#7C3AED]/20">
+          <span className="text-xs font-bold tracking-widest text-[#7C3AED] dark:text-[#EDE9FE] uppercase bg-[#EDE9FE] dark:bg-[#7C3AED]/20 px-3.5 py-1.5 rounded-full border border-[#7C3AED]/20">
             The Mobility Challenge
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#242124] font-manrope tracking-tight leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#242124] dark:text-white font-manrope tracking-tight leading-tight">
             Mobility Is More Than Getting From Point A to Point B.
           </h2>
-          <p className="text-base sm:text-lg text-[#6B7280]">
+          <p className="text-base sm:text-lg text-[#6B7280] dark:text-gray-300">
             Every trip should give passengers and drivers complete peace of mind. HERDRIVE solves four foundational issues in everyday transit.
           </p>
         </div>
@@ -75,37 +75,37 @@ export const Problem: React.FC = () => {
               >
                 <Card
                   variant="white"
-                  className="h-full flex flex-col justify-between hover:border-[#7C3AED]/40 hover:-translate-y-1 transition-all duration-300 border-gray-200/90"
+                  className="h-full flex flex-col justify-between hover:border-[#7C3AED]/40 hover:-translate-y-1 transition-all duration-300 border-gray-200/90 dark:border-white/10"
                 >
                   <div className="space-y-4">
                     {/* Top Icon & Tag */}
                     <div className="flex items-center justify-between">
-                      <div className="w-12 h-12 rounded-2xl bg-[#EDE9FE] text-[#7C3AED] flex items-center justify-center font-bold shadow-xs">
+                      <div className="w-12 h-12 rounded-2xl bg-[#EDE9FE] dark:bg-[#7C3AED]/20 text-[#7C3AED] dark:text-[#EDE9FE] flex items-center justify-center font-bold shadow-xs">
                         <IconComponent className="w-6 h-6" />
                       </div>
-                      <span className="text-[11px] font-bold text-[#7C3AED] bg-[#EDE9FE]/60 px-2.5 py-1 rounded-md border border-[#7C3AED]/15">
+                      <span className="text-[11px] font-bold text-[#7C3AED] dark:text-[#EDE9FE] bg-[#EDE9FE]/60 dark:bg-[#7C3AED]/10 px-2.5 py-1 rounded-md border border-[#7C3AED]/15">
                         {item.tag}
                       </span>
                     </div>
 
                     {/* Category Label */}
-                    <span className="text-xs font-extrabold tracking-wider text-[#7C3AED] uppercase block">
+                    <span className="text-xs font-extrabold tracking-wider text-[#7C3AED] dark:text-[#EDE9FE] uppercase block">
                       {item.category}
                     </span>
 
                     {/* Problem Question */}
-                    <h3 className="text-lg font-bold text-[#242124] font-manrope leading-snug">
+                    <h3 className="text-lg font-bold text-[#242124] dark:text-white font-manrope leading-snug">
                       "{item.question}"
                     </h3>
 
                     {/* Description */}
-                    <p className="text-sm text-[#6B7280] leading-relaxed">
+                    <p className="text-sm text-[#6B7280] dark:text-gray-300 leading-relaxed">
                       {item.description}
                     </p>
                   </div>
 
-                  <div className="pt-6 border-t border-gray-100 mt-6">
-                    <span className="text-xs font-semibold text-[#211827] flex items-center gap-1.5">
+                  <div className="pt-6 border-t border-gray-100 dark:border-white/10 mt-6">
+                    <span className="text-xs font-semibold text-[#211827] dark:text-gray-300 flex items-center gap-1.5">
                       <span className="w-2 h-2 rounded-full bg-[#7C3AED]" />
                       HERDRIVE Solution below
                     </span>
