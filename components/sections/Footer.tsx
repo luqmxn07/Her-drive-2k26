@@ -2,18 +2,24 @@
 
 import React from "react";
 import Link from "next/link";
-import { Shield } from "lucide-react";
+import Image from "next/image";
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#17111F] text-white pt-16 pb-12 border-t border-white/10">
+    <footer className="bg-[#211827] text-white pt-16 pb-12 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {/* Brand Info */}
+          {/* Brand Info with Official App Icon */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="#hero" className="flex items-center gap-2.5">
-              <div className="w-10 h-10 rounded-xl bg-[#7C3AED] text-white flex items-center justify-center font-bold shadow-md">
-                <Shield className="w-5 h-5 text-white" />
+            <Link href="#hero" className="flex items-center gap-3 group">
+              <div className="w-10 h-10 rounded-xl overflow-hidden shadow-md ring-1 ring-[#7C3AED]/40 group-hover:scale-105 transition-transform duration-200 shrink-0">
+                <Image
+                  src="/brand/herdrive icon dark.png"
+                  alt="HERDRIVE Logo"
+                  width={40}
+                  height={40}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <span className="font-extrabold text-2xl tracking-tight text-white font-manrope">
                 HERDRIVE

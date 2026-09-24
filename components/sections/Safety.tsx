@@ -27,10 +27,10 @@ export const Safety: React.FC = () => {
       title: "Prevention & Verification",
       icon: UserCheck,
       items: [
-        "Government ID & Aadhaar/DL verification",
-        "Vehicle registration (RC) & commercial insurance checks",
-        "Mandatory 4-digit Ride PIN before boarding",
-        "Pre-configured emergency contact setup (up to 5 contacts)",
+        "Verified driver identity & commercial documentation screening",
+        "Vehicle registration and active safety standards compliance",
+        "Mandatory 4-digit Ride PIN before entering the vehicle",
+        "Pre-configured emergency contacts setup (up to 5 contacts)",
       ],
     },
     {
@@ -38,10 +38,10 @@ export const Safety: React.FC = () => {
       title: "Continuous Monitoring & Response",
       icon: Radio,
       items: [
-        "Live GPS spatial tracking (sub-second telemetry)",
-        "Automated route deviation alerts (500m threshold)",
-        "Auto-share trip links with emergency contacts",
-        "Slide-to-activate SOS emergency trigger (#DC2626)",
+        "Continuous GPS route monitoring with live journey updates",
+        "Automated route deviation detection and journey alerts",
+        "One-tap auto-share live trip links with emergency contacts",
+        "Slide-to-activate emergency SOS response trigger",
       ],
     },
     {
@@ -49,16 +49,16 @@ export const Safety: React.FC = () => {
       title: "Accountability & Review",
       icon: FileText,
       items: [
-        "Mandatory mutual star ratings",
-        "Confidential safety reporting channel",
-        "Dedicated Safety Operations Center (SOC) review",
-        "Zero-tolerance policy enforcement",
+        "Mandatory mutual community ratings and feedback",
+        "Confidential safety reporting channel for riders and drivers",
+        "Dedicated safety review team for prompt inquiry resolution",
+        "Strict zero-tolerance policy against misconduct",
       ],
     },
   ];
 
   return (
-    <section id="safety" className="py-20 md:py-28 bg-[#17111F] text-white relative overflow-hidden">
+    <section id="safety" className="py-20 md:py-28 bg-[#211827] text-white relative overflow-hidden">
       {/* Background ambient glow */}
       <div className="absolute top-1/3 left-0 w-96 h-96 bg-[#7C3AED]/20 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute bottom-10 right-0 w-96 h-96 bg-[#DC2626]/10 rounded-full blur-[140px] pointer-events-none" />
@@ -73,7 +73,7 @@ export const Safety: React.FC = () => {
             Safety Is a System, Not a Single Feature.
           </h2>
           <p className="text-base sm:text-lg text-gray-300">
-            We don't rely on gimmicks or make unsupported claims. HERDRIVE implements a rigorous 3-stage operational model active throughout the entire ride lifecycle.
+            We don't rely on gimmicks or empty promises. HERDRIVE implements a rigorous 3-stage operational model active throughout the entire ride lifecycle.
           </p>
         </div>
 
@@ -134,10 +134,10 @@ export const Safety: React.FC = () => {
             <div className="p-4 rounded-xl bg-white/5 border border-white/10 text-xs text-gray-400 space-y-1">
               <p className="font-semibold text-gray-300 flex items-center gap-1.5">
                 <AlertTriangle className="w-4 h-4 text-amber-400" />
-                Drafting & Legal Standard Notice
+                Operational & Safety Standards
               </p>
               <p>
-                HERDRIVE plans to support participating drivers with appropriate safety equipment and responsible-use training, subject to applicable local laws and regulations. Safety is presented strictly as a layered operational system.
+                HERDRIVE is designed around multi-layered safety workflows and rigorous driver onboarding, structured in accordance with applicable transportation safety norms and local regulations.
               </p>
             </div>
           </div>
@@ -153,7 +153,7 @@ export const Safety: React.FC = () => {
                     Safety Center UI Mockup
                   </span>
                 </div>
-                <Badge variant="plum">Live Demo</Badge>
+                <Badge variant="plum">Interactive Preview</Badge>
               </div>
 
               {/* Status Pills */}
@@ -182,9 +182,9 @@ export const Safety: React.FC = () => {
                   Safety System Features
                 </span>
                 <ul className="text-xs text-gray-300 space-y-1.5">
-                  <li>• Automatic 4-Digit Ride PIN check before vehicle moves</li>
-                  <li>• Sub-second spatial telemetry connected to NestJS backend</li>
-                  <li>• Direct hotline to 24/7 Safety Operations Center (SOC)</li>
+                  <li>• Mandatory 4-Digit Ride PIN before vehicle moves</li>
+                  <li>• Real-time route deviation detection and alerts</li>
+                  <li>• Instant emergency escalation and support line</li>
                 </ul>
               </div>
             </div>

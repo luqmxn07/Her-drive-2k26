@@ -1,0 +1,66 @@
+[
+  {
+    "date": "2026-09-23",
+    "time": "21:30",
+    "timezone": "Asia/Kolkata",
+    "commit_message": "Initial commit: HERDRIVE Landing Page MVP",
+    "summary": "Initial MVP landing page with 12 sections built using Next.js and Tailwind CSS",
+    "files_changed": [
+      "app/*",
+      "components/*",
+      "lib/*",
+      "types/*",
+      "package.json"
+    ],
+    "validation": {
+      "build": "PASS",
+      "lint": "PASS",
+      "tests": "N/A"
+    },
+    "security_scan": "PASS",
+    "stable": true
+  },
+  {
+    "date": "2026-09-23",
+    "time": "23:11",
+    "timezone": "Asia/Kolkata",
+    "commit_message": "docs: add proprietary license",
+    "summary": "Add proprietary All Rights Reserved license file",
+    "files_changed": [
+      "LICENSE"
+    ],
+    "validation": {
+      "build": "PASS",
+      "lint": "PASS",
+      "tests": "N/A"
+    },
+    "security_scan": "PASS",
+    "stable": true
+  },
+  {
+    "date": "2026-09-24",
+    "time": "16:30",
+    "timezone": "Asia/Kolkata",
+    "commit_message": "feat: refresh HERDRIVE frontend with new brand palette and V2 polish",
+    "summary": "Frontend V2 visual update with official logo assets, Deep Plum palette, and refined mockups",
+    "files_changed": [
+      "app/globals.css",
+      "app/layout.tsx",
+      "components/sections/*",
+      "components/ui/*",
+      "public/brand/*",
+      "public/favicon.png",
+      "public/apple-touch-icon.png",
+      "ANTIGRAVITY_CONTEXT.md",
+      "docs/CHANGELOG.md",
+      "docs/commit-history.json"
+    ],
+    "validation": {
+      "build": "PASS",
+      "lint": "PASS",
+      "tests": "N/A"
+    },
+    "security_scan": "PASS",
+    "stable": true
+  }
+]

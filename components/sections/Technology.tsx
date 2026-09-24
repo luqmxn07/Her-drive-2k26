@@ -18,38 +18,38 @@ export const Technology: React.FC = () => {
   const platformFeatures = [
     {
       id: "verification",
-      title: "Identity & Document Verification",
-      desc: "Aadhaar, PAN & government database checks for complete trust",
+      title: "Identity & Document Screening",
+      desc: "Comprehensive identity verification for high-trust participation",
       icon: ShieldCheck,
     },
     {
       id: "matching",
-      title: "Algorithmic Ride Matching",
-      desc: "H3 spatial indexing pairs optimal drivers in seconds",
+      title: "Intelligent Ride Matching",
+      desc: "Optimized driver-passenger pairing based on location and availability",
       icon: Zap,
     },
     {
       id: "gps",
-      title: "Live Sub-Second GPS Tracking",
-      desc: "Continuous spatial telemetry and polyline route monitoring",
+      title: "Live GPS Route Monitoring",
+      desc: "Continuous route tracking and journey updates throughout the ride",
       icon: Radio,
     },
     {
       id: "sos",
       title: "Layered Safety & SOS System",
-      desc: "Instant escalation matrix to Safety Operations Center (SOC)",
+      desc: "Instant escalation matrix with automated alerts to designated contacts",
       icon: Lock,
     },
     {
       id: "payments",
       title: "Encrypted Digital Payments",
-      desc: "Automated cashless transactions via PCI-DSS compliant gateways",
+      desc: "Secure, automated cashless transactions via trusted digital gateways",
       icon: CreditCard,
     },
   ];
 
   return (
-    <section id="technology" className="py-20 md:py-28 bg-[#17111F] text-white relative overflow-hidden">
+    <section id="technology" className="py-20 md:py-28 bg-[#211827] text-white relative overflow-hidden">
       {/* Background glow effects */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#7C3AED]/15 rounded-full blur-[160px] pointer-events-none" />
 
@@ -115,7 +115,7 @@ export const Technology: React.FC = () => {
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="p-8 rounded-3xl bg-gradient-to-br from-slate-900 to-[#17111F] border-2 border-[#7C3AED]/50 shadow-2xl space-y-6 relative overflow-hidden"
+            className="p-8 rounded-3xl bg-gradient-to-br from-slate-900 to-[#211827] border-2 border-[#7C3AED]/50 shadow-2xl space-y-6 relative overflow-hidden"
           >
             <div className="flex items-center justify-between border-b border-white/10 pb-4">
               <div className="flex items-center gap-3">
@@ -127,13 +127,13 @@ export const Technology: React.FC = () => {
                     HERDRIVE PLATFORM
                   </h3>
                   <span className="text-xs text-[#EDE9FE]">
-                    Real-time Spatial & Safety Orchestration Engine
+                    Real-time Journey & Safety Orchestration Engine
                   </span>
                 </div>
               </div>
 
               <span className="text-xs font-mono font-bold px-3 py-1 rounded-full bg-[#7C3AED]/20 text-[#EDE9FE] border border-[#7C3AED]/30">
-                Sub-Second Telemetry
+                Live Journey Sync
               </span>
             </div>
 
@@ -178,7 +178,7 @@ export const Technology: React.FC = () => {
               TRUST, SAFETY & COMMUNITY SUPPORT
             </h3>
             <p className="text-xs text-gray-300 max-w-xl mx-auto">
-              Delivering verified participation, 24/7 Safety Operations Center (SOC) oversight, and rapid emergency resolution.
+              Delivering verified community participation, dedicated safety review oversight, and prompt emergency resolution.
             </p>
           </motion.div>
         </div>

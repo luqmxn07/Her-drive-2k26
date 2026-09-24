@@ -46,14 +46,14 @@ export const Problem: React.FC = () => {
   ];
 
   return (
-    <section id="problem" className="py-20 md:py-28 bg-[#F8F7F5] relative">
+    <section id="problem" className="py-20 md:py-28 bg-[#FAF9F7] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <span className="text-xs font-bold tracking-widest text-[#7C3AED] uppercase bg-[#EDE9FE] px-3.5 py-1.5 rounded-full border border-[#7C3AED]/20">
             The Mobility Challenge
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#171717] font-manrope tracking-tight leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#242124] font-manrope tracking-tight leading-tight">
             Mobility Is More Than Getting From Point A to Point B.
           </h2>
           <p className="text-base sm:text-lg text-[#6B7280]">
@@ -75,15 +75,15 @@ export const Problem: React.FC = () => {
               >
                 <Card
                   variant="white"
-                  className="h-full flex flex-col justify-between hover:border-[#7C3AED]/40 transition-all duration-300"
+                  className="h-full flex flex-col justify-between hover:border-[#7C3AED]/40 hover:-translate-y-1 transition-all duration-300 border-gray-200/90"
                 >
                   <div className="space-y-4">
                     {/* Top Icon & Tag */}
                     <div className="flex items-center justify-between">
-                      <div className="w-12 h-12 rounded-2xl bg-[#EDE9FE] text-[#7C3AED] flex items-center justify-center font-bold shadow-sm">
+                      <div className="w-12 h-12 rounded-2xl bg-[#EDE9FE] text-[#7C3AED] flex items-center justify-center font-bold shadow-xs">
                         <IconComponent className="w-6 h-6" />
                       </div>
-                      <span className="text-[11px] font-semibold text-[#7C3AED] bg-[#EDE9FE]/50 px-2.5 py-1 rounded-md border border-[#7C3AED]/10">
+                      <span className="text-[11px] font-bold text-[#7C3AED] bg-[#EDE9FE]/60 px-2.5 py-1 rounded-md border border-[#7C3AED]/15">
                         {item.tag}
                       </span>
                     </div>
@@ -94,7 +94,7 @@ export const Problem: React.FC = () => {
                     </span>
 
                     {/* Problem Question */}
-                    <h3 className="text-lg font-bold text-[#171717] font-manrope leading-snug">
+                    <h3 className="text-lg font-bold text-[#242124] font-manrope leading-snug">
                       "{item.question}"
                     </h3>
 
@@ -105,7 +105,7 @@ export const Problem: React.FC = () => {
                   </div>
 
                   <div className="pt-6 border-t border-gray-100 mt-6">
-                    <span className="text-xs font-semibold text-[#17111F] flex items-center gap-1.5">
+                    <span className="text-xs font-semibold text-[#211827] flex items-center gap-1.5">
                       <span className="w-2 h-2 rounded-full bg-[#7C3AED]" />
                       HERDRIVE Solution below
                     </span>

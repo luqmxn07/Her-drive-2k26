@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 interface PhoneMockupProps {
@@ -19,7 +20,7 @@ export const PhoneMockup: React.FC<PhoneMockupProps> = ({
   return (
     <div
       className={cn(
-        "relative mx-auto w-full max-w-[340px] sm:max-w-[380px] rounded-[44px] p-3.5 bg-[#17111F] shadow-2xl shadow-[#17111F]/30 ring-1 ring-white/20 select-none",
+        "relative mx-auto w-full max-w-[340px] sm:max-w-[380px] rounded-[44px] p-3.5 bg-[#211827] shadow-2xl shadow-[#211827]/40 ring-1 ring-white/20 select-none",
         className
       )}
     >
@@ -42,11 +43,19 @@ export const PhoneMockup: React.FC<PhoneMockupProps> = ({
           </div>
         </div>
 
-        {/* Mini App Header */}
+        {/* Mini App Header with Official App Icon */}
         <div className="px-4 py-2.5 flex items-center justify-between border-b border-gray-800/80 bg-slate-900/90 text-white z-20 shrink-0">
           <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-[#7C3AED] animate-pulse" />
-            <span className="font-bold text-xs tracking-wider text-[#EDE9FE] uppercase">
+            <div className="relative w-5 h-5 rounded-md overflow-hidden ring-1 ring-[#7C3AED]/40 shadow-xs">
+              <Image
+                src="/brand/herdrive icon dark.png"
+                alt="HERDRIVE App"
+                width={20}
+                height={20}
+                className="object-cover w-full h-full"
+              />
+            </div>
+            <span className="font-bold text-xs tracking-wider text-[#EDE9FE] uppercase font-manrope">
               {headerTitle}
             </span>
           </div>
@@ -59,7 +68,7 @@ export const PhoneMockup: React.FC<PhoneMockupProps> = ({
         <div
           className={cn(
             "flex-1 overflow-y-auto relative flex flex-col custom-scrollbar",
-            theme === "light" ? "bg-[#F8F7F5] text-[#171717]" : "bg-[#17111F] text-white"
+            theme === "light" ? "bg-[#FAF9F7] text-[#242124]" : "bg-[#211827] text-white"
           )}
         >
           {children}

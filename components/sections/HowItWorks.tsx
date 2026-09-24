@@ -51,14 +51,14 @@ export const HowItWorks: React.FC = () => {
   ];
 
   return (
-    <section id="how-it-works" className="py-20 md:py-28 bg-[#F8F7F5] relative">
+    <section id="how-it-works" className="py-20 md:py-28 bg-[#FAF9F7] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <span className="text-xs font-bold tracking-widest text-[#7C3AED] uppercase bg-[#EDE9FE] px-3.5 py-1.5 rounded-full border border-[#7C3AED]/20">
             Simple & Transparent
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#171717] font-manrope tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#242124] font-manrope tracking-tight">
             How It Works
           </h2>
           <p className="text-base sm:text-lg text-[#6B7280]">
@@ -84,16 +84,16 @@ export const HowItWorks: React.FC = () => {
                   className="flex flex-col items-center text-center space-y-4 group"
                 >
                   {/* Step Number Circle */}
-                  <div className="w-14 h-14 rounded-2xl bg-[#17111F] text-white flex items-center justify-center font-bold text-lg shadow-lg group-hover:bg-[#7C3AED] group-hover:scale-110 transition-all duration-300 relative border-4 border-[#F8F7F5]">
+                  <div className="w-14 h-14 rounded-2xl bg-[#211827] text-white flex items-center justify-center font-bold text-lg shadow-md group-hover:bg-[#7C3AED] group-hover:scale-105 transition-all duration-300 relative border-4 border-[#FAF9F7]">
                     <IconComponent className="w-6 h-6 text-[#7C3AED] group-hover:text-white transition-colors" />
-                    <span className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-[#7C3AED] text-white text-xs font-bold flex items-center justify-center border-2 border-[#F8F7F5]">
+                    <span className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-[#7C3AED] text-white text-xs font-bold flex items-center justify-center border-2 border-[#FAF9F7]">
                       {step.number}
                     </span>
                   </div>
 
                   {/* Step Title & Details */}
                   <div className="space-y-1.5 px-2">
-                    <h3 className="font-bold text-base text-[#171717] font-manrope">
+                    <h3 className="font-bold text-base text-[#242124] font-manrope">
                       {step.title}
                     </h3>
                     <p className="text-xs text-[#6B7280] leading-relaxed">
@@ -130,12 +130,12 @@ export const HowItWorks: React.FC = () => {
                 className="relative flex items-start gap-4"
               >
                 {/* Number Circle */}
-                <div className="w-10 h-10 rounded-xl bg-[#17111F] text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-md border-2 border-[#F8F7F5] z-10">
+                <div className="w-10 h-10 rounded-xl bg-[#211827] text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-md border-2 border-[#FAF9F7] z-10">
                   <IconComponent className="w-5 h-5 text-[#7C3AED]" />
                 </div>
 
                 {/* Content Card */}
-                <div className="bg-white p-5 rounded-2xl border border-gray-200/80 shadow-sm flex-1 space-y-2">
+                <div className="bg-white p-5 rounded-2xl border border-gray-200/90 shadow-xs flex-1 space-y-2">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-bold text-[#7C3AED] uppercase">
                       Step {step.number}
@@ -144,7 +144,7 @@ export const HowItWorks: React.FC = () => {
                       {step.snippet}
                     </span>
                   </div>
-                  <h3 className="font-bold text-base text-[#171717] font-manrope">
+                  <h3 className="font-bold text-base text-[#242124] font-manrope">
                     {step.title}
                   </h3>
                   <p className="text-xs text-[#6B7280] leading-relaxed">

@@ -30,14 +30,14 @@ export const Community: React.FC = () => {
   ];
 
   return (
-    <section id="community" className="py-20 md:py-28 bg-[#F8F7F5] relative">
+    <section id="community" className="py-20 md:py-28 bg-[#FAF9F7] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <span className="text-xs font-bold tracking-widest text-[#7C3AED] uppercase bg-[#EDE9FE] px-3.5 py-1.5 rounded-full border border-[#7C3AED]/20">
             Community & Values
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#171717] font-manrope tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#242124] font-manrope tracking-tight">
             Built for a Community That Moves Together.
           </h2>
           <p className="text-base sm:text-lg text-[#6B7280]">
@@ -57,11 +57,11 @@ export const Community: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.1 }}
               >
-                <Card variant="white" className="h-full space-y-4 border-gray-200/80">
+                <Card variant="white" className="h-full space-y-4 border-gray-200/90 shadow-xs hover:-translate-y-1 transition-all duration-300">
                   <div className="w-12 h-12 rounded-xl bg-[#EDE9FE] text-[#7C3AED] flex items-center justify-center font-bold">
                     <IconComp className="w-6 h-6" />
                   </div>
-                  <h3 className="font-bold text-lg text-[#171717] font-manrope">
+                  <h3 className="font-bold text-lg text-[#242124] font-manrope">
                     {val.title}
                   </h3>
                   <p className="text-xs text-[#6B7280] leading-relaxed">

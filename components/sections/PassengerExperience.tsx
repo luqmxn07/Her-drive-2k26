@@ -21,7 +21,7 @@ import { Button } from "@/components/ui/Button";
 export const PassengerExperience: React.FC = () => {
   const benefits = [
     "Verified women drivers with rigorous identity checks",
-    "Live GPS route monitoring & sub-second tracking",
+    "Continuous GPS route monitoring & journey sharing",
     "Mandatory 4-digit Ride PIN before entering vehicle",
     "One-tap auto-share live trip with emergency contacts",
     "Integrated emergency SOS response system",
@@ -29,7 +29,7 @@ export const PassengerExperience: React.FC = () => {
   ];
 
   return (
-    <section id="passenger" className="py-20 md:py-28 bg-[#F8F7F5] relative">
+    <section id="passenger" className="py-20 md:py-28 bg-[#FAF9F7] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Column: Text Content */}
@@ -44,7 +44,7 @@ export const PassengerExperience: React.FC = () => {
               Passenger App Experience
             </span>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#171717] font-manrope tracking-tight leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#242124] font-manrope tracking-tight leading-tight">
               Designed Around the Passenger.
             </h2>
 
@@ -55,7 +55,7 @@ export const PassengerExperience: React.FC = () => {
             {/* Checkmark List */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
               {benefits.map((benefit, idx) => (
-                <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#171717]">
+                <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#242124]">
                   <CheckCircle2 className="w-4 h-4 text-[#7C3AED] shrink-0 mt-0.5" />
                   <span className="font-medium">{benefit}</span>
                 </div>
@@ -64,7 +64,7 @@ export const PassengerExperience: React.FC = () => {
 
             <div className="pt-4">
               <a href="#waitlist">
-                <Button size="md" variant="primary" className="gap-2">
+                <Button size="md" variant="primary" className="gap-2 shadow-md shadow-[#7C3AED]/20">
                   Get Priority Passenger Access
                   <ArrowRight className="w-4 h-4" />
                 </Button>
@@ -87,7 +87,7 @@ export const PassengerExperience: React.FC = () => {
                 <div className="flex items-center justify-between">
                   <div>
                     <span className="text-xs text-[#6B7280]">Good evening,</span>
-                    <h4 className="text-base font-bold text-[#17111F] font-manrope">Sara Sharma</h4>
+                    <h4 className="text-base font-bold text-[#211827] font-manrope">Sara Sharma</h4>
                   </div>
                   <Badge variant="lavender" icon={<ShieldCheck className="w-3.5 h-3.5 text-[#7C3AED]" />}>
                     Verified User
@@ -95,23 +95,23 @@ export const PassengerExperience: React.FC = () => {
                 </div>
 
                 {/* Where to Search Bar */}
-                <div className="p-3 bg-white rounded-2xl border border-gray-200 shadow-sm flex items-center gap-3">
+                <div className="p-3 bg-white rounded-2xl border border-gray-200 shadow-xs flex items-center gap-3">
                   <div className="p-2 rounded-xl bg-[#EDE9FE] text-[#7C3AED]">
                     <Search className="w-4 h-4" />
                   </div>
                   <div className="flex-1">
-                    <span className="text-[10px] text-[#6B7280] block uppercase font-semibold">
+                    <span className="text-[10px] text-[#6B7280] block uppercase font-bold">
                       Destination
                     </span>
-                    <span className="text-xs font-bold text-[#171717]">
+                    <span className="text-xs font-bold text-[#242124]">
                       Where to? (Search drop-off safely)
                     </span>
                   </div>
                 </div>
 
                 {/* Map Polyline Snippet Box */}
-                <div className="h-28 rounded-2xl bg-slate-900 relative overflow-hidden flex items-center justify-center p-3 border border-gray-200">
-                  <div className="absolute inset-0 opacity-40 bg-[radial-gradient(#7C3AED_1px,transparent_1px)] [background-size:12px_12px]" />
+                <div className="h-28 rounded-2xl bg-[#211827] relative overflow-hidden flex items-center justify-center p-3 border border-gray-200">
+                  <div className="absolute inset-0 opacity-30 bg-[radial-gradient(#7C3AED_1px,transparent_1px)] [background-size:12px_12px]" />
                   <div className="relative z-10 w-full flex items-center justify-between bg-black/60 backdrop-blur-sm p-2.5 rounded-xl border border-white/10 text-white text-xs">
                     <div className="flex items-center gap-2">
                       <MapPin className="w-4 h-4 text-[#7C3AED]" />
@@ -130,14 +130,14 @@ export const PassengerExperience: React.FC = () => {
                   </span>
 
                   {/* Standard Option */}
-                  <div className="p-3 rounded-2xl bg-white border-2 border-[#7C3AED] shadow-sm flex items-center justify-between">
+                  <div className="p-3 rounded-2xl bg-white border-2 border-[#7C3AED] shadow-xs flex items-center justify-between">
                     <div className="flex items-center gap-3">
                       <div className="p-2.5 rounded-xl bg-[#EDE9FE] text-[#7C3AED]">
                         <Car className="w-5 h-5" />
                       </div>
                       <div>
                         <div className="flex items-center gap-1.5">
-                          <span className="font-bold text-xs text-[#171717]">HERDRIVE Standard</span>
+                          <span className="font-bold text-xs text-[#242124]">HERDRIVE Standard</span>
                           <span className="text-[9px] bg-[#7C3AED] text-white px-1.5 py-0.2 rounded font-bold">
                             RECOMMENDED
                           </span>
@@ -145,7 +145,7 @@ export const PassengerExperience: React.FC = () => {
                         <span className="text-[10px] text-[#6B7280]">Verified woman driver • 3 mins away</span>
                       </div>
                     </div>
-                    <span className="font-bold text-sm text-[#17111F]">₹240</span>
+                    <span className="font-bold text-sm text-[#211827]">₹240</span>
                   </div>
 
                   {/* Premium Option */}
@@ -155,11 +155,11 @@ export const PassengerExperience: React.FC = () => {
                         <Car className="w-5 h-5" />
                       </div>
                       <div>
-                        <span className="font-bold text-xs text-[#171717] block">HERDRIVE Premium</span>
+                        <span className="font-bold text-xs text-[#242124] block">HERDRIVE Premium</span>
                         <span className="text-[10px] text-[#6B7280]">Spacious EV sedan • 5 mins away</span>
                       </div>
                     </div>
-                    <span className="font-bold text-sm text-[#17111F]">₹310</span>
+                    <span className="font-bold text-sm text-[#211827]">₹310</span>
                   </div>
                 </div>
 
@@ -167,11 +167,11 @@ export const PassengerExperience: React.FC = () => {
                 <div className="grid grid-cols-2 gap-2 text-xs">
                   <div className="p-2.5 rounded-xl bg-white border border-gray-200 flex items-center gap-2">
                     <CreditCard className="w-4 h-4 text-[#7C3AED]" />
-                    <span className="text-[11px] font-medium text-[#171717]">UPI / Cashless</span>
+                    <span className="text-[11px] font-medium text-[#242124]">UPI / Cashless</span>
                   </div>
                   <div className="p-2.5 rounded-xl bg-white border border-gray-200 flex items-center gap-2">
                     <Lock className="w-4 h-4 text-[#7C3AED]" />
-                    <span className="text-[11px] font-medium text-[#171717]">PIN Boarding</span>
+                    <span className="text-[11px] font-medium text-[#242124]">PIN Boarding</span>
                   </div>
                 </div>
 

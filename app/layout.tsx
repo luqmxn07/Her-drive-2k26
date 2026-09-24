@@ -15,6 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://herdrive.com"),
   title: "HERDRIVE — Move Freely. Ride Confidently.",
   description:
     "HERDRIVE is a women-focused mobility platform built around safety, comfort, trust, and flexible earning opportunities. Join the waitlist today.",
@@ -27,6 +28,10 @@ export const metadata: Metadata = {
     "women safety",
     "mobility platform",
   ],
+  icons: {
+    icon: "/favicon.png",
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
     title: "HERDRIVE — Move Freely. Ride Confidently.",
     description:
@@ -35,12 +40,21 @@ export const metadata: Metadata = {
     siteName: "HERDRIVE",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/brand/Gemini_Generated_Image_cwrx42cwrx42cwrx.png",
+        width: 1200,
+        height: 1200,
+        alt: "HERDRIVE — Move Freely. Ride Confidently.",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "HERDRIVE — Move Freely. Ride Confidently.",
     description:
       "A women-focused mobility platform built around safety, comfort, trust, and opportunity.",
+    images: ["/brand/Gemini_Generated_Image_cwrx42cwrx42cwrx.png"],
   },
 };
 
@@ -54,7 +68,7 @@ export default function RootLayout({
       lang="en"
       className={`${manrope.variable} ${inter.variable} scroll-smooth antialiased`}
     >
-      <body className="min-h-screen bg-[#F8F7F5] text-[#171717] font-sans selection:bg-[#7C3AED] selection:text-white flex flex-col">
+      <body className="min-h-screen bg-[#FAF9F7] text-[#242124] font-sans selection:bg-[#7C3AED] selection:text-white flex flex-col">
         {children}
       </body>
     </html>

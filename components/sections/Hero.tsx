@@ -22,10 +22,10 @@ export const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="relative pt-28 sm:pt-36 pb-20 md:pb-28 overflow-hidden bg-gradient-to-b from-[#EDE9FE]/40 via-[#F8F7F5] to-[#F8F7F5]"
+      className="relative pt-28 sm:pt-36 pb-20 md:pb-28 overflow-hidden bg-gradient-to-b from-[#EDE9FE]/50 via-[#FAF9F7] to-[#FAF9F7]"
     >
       {/* Decorative background glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#7C3AED]/10 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#7C3AED]/10 blur-[130px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -37,15 +37,15 @@ export const Hero: React.FC = () => {
             className="lg:col-span-7 space-y-6 sm:space-y-8 text-center lg:text-left"
           >
             {/* Top Pill Announcement */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#EDE9FE] text-[#7C3AED] border border-[#7C3AED]/20 shadow-sm text-xs sm:text-sm font-semibold">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#EDE9FE] text-[#7C3AED] border border-[#7C3AED]/25 shadow-xs text-xs sm:text-sm font-bold tracking-wide">
               <Sparkles className="w-4 h-4 text-[#7C3AED]" />
               <span>Next-Gen Women Mobility Platform</span>
               <span className="w-1.5 h-1.5 rounded-full bg-[#7C3AED]" />
-              <span className="text-[#17111F]">Launching Soon</span>
+              <span className="text-[#211827]">Launching Soon</span>
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#171717] tracking-tight font-manrope leading-[1.15]">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#242124] tracking-tight font-manrope leading-[1.15]">
               Move Freely. <br className="hidden sm:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7C3AED] to-[#5B21B6]">
                 Ride Confidently.
@@ -74,7 +74,7 @@ export const Hero: React.FC = () => {
             </div>
 
             {/* Trust Badges */}
-            <div className="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-y-2 gap-x-6 text-xs sm:text-sm font-medium text-[#6B7280]">
+            <div className="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-y-2 gap-x-6 text-xs sm:text-sm font-semibold text-[#6B7280]">
               <span className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-[#7C3AED]" />
                 Launching soon
@@ -100,20 +100,20 @@ export const Hero: React.FC = () => {
             {/* Phone Mockup Frame */}
             <PhoneMockup headerTitle="HERDRIVE Ride">
               {/* Map View Canvas (Conceptual SVG Map) */}
-              <div className="relative h-64 sm:h-72 w-full bg-slate-900 overflow-hidden">
+              <div className="relative h-64 sm:h-72 w-full bg-[#211827] overflow-hidden">
                 {/* Simulated Map Grid / Roads SVG */}
                 <svg
-                  className="absolute inset-0 w-full h-full opacity-35"
+                  className="absolute inset-0 w-full h-full opacity-30"
                   xmlns="http://www.w3.org/2000/svg"
                   width="100%"
                   height="100%"
                 >
                   <defs>
-                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#7C3AED" strokeWidth="0.5" />
+                    <pattern id="hero-grid" width="36" height="36" patternUnits="userSpaceOnUse">
+                      <path d="M 36 0 L 0 0 0 36" fill="none" stroke="#7C3AED" strokeWidth="0.5" />
                     </pattern>
                   </defs>
-                  <rect width="100%" height="100%" fill="url(#grid)" />
+                  <rect width="100%" height="100%" fill="url(#hero-grid)" />
                   {/* Route Polyline */}
                   <path
                     d="M 50 200 Q 120 120 220 140 T 320 60"
@@ -127,7 +127,7 @@ export const Hero: React.FC = () => {
                 {/* Live Status Floating Shield */}
                 <div className="absolute top-3 left-3 right-3 flex items-center justify-between z-10">
                   <Badge variant="plum" icon={<ShieldCheck className="w-3.5 h-3.5 text-[#7C3AED]" />}>
-                    Safety System Active
+                    Safety Active
                   </Badge>
                   <Badge variant="violet" icon={<Lock className="w-3.5 h-3.5" />}>
                     PIN: 4912
@@ -135,29 +135,29 @@ export const Hero: React.FC = () => {
                 </div>
 
                 {/* Pickup & Destination Pins */}
-                <div className="absolute top-12 left-10 flex items-center gap-1.5 bg-slate-950/90 text-white text-[11px] px-2.5 py-1 rounded-full border border-white/20 shadow-md">
+                <div className="absolute top-12 left-8 flex items-center gap-1.5 bg-[#211827]/90 text-white text-[11px] px-2.5 py-1 rounded-full border border-white/20 shadow-md">
                   <MapPin className="w-3.5 h-3.5 text-emerald-400" />
                   <span>Koramangala 5th Block</span>
                 </div>
 
-                <div className="absolute bottom-16 right-8 flex items-center gap-1.5 bg-[#7C3AED] text-white text-[11px] px-2.5 py-1 rounded-full border border-white/20 shadow-lg">
+                <div className="absolute bottom-16 right-6 flex items-center gap-1.5 bg-[#7C3AED] text-white text-[11px] px-2.5 py-1 rounded-full border border-white/20 shadow-lg">
                   <Navigation className="w-3.5 h-3.5 text-white" />
                   <span>Indiranagar Metro</span>
                 </div>
 
                 {/* Moving Driver Vehicle Pin */}
-                <div className="absolute top-28 left-40 transform -translate-x-1/2 -translate-y-1/2 p-2 rounded-full bg-[#17111F] border-2 border-[#7C3AED] shadow-xl text-white animate-pulse">
+                <div className="absolute top-28 left-40 transform -translate-x-1/2 -translate-y-1/2 p-2 rounded-full bg-[#211827] border-2 border-[#7C3AED] shadow-xl text-white animate-pulse">
                   <Car className="w-4 h-4 text-[#7C3AED]" />
                 </div>
               </div>
 
               {/* Driver & Ride Details Bottom Drawer */}
-              <div className="p-4 bg-white text-[#171717] space-y-3.5 border-t border-gray-100 flex-1">
+              <div className="p-4 bg-white text-[#242124] space-y-3.5 border-t border-gray-100 flex-1">
                 {/* Verified Driver Info Card */}
                 <div className="p-3 rounded-2xl bg-[#EDE9FE]/50 border border-[#7C3AED]/20 flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <div className="relative">
-                      <div className="w-11 h-11 rounded-full bg-[#17111F] text-white flex items-center justify-center font-bold text-sm border-2 border-[#7C3AED]">
+                      <div className="w-11 h-11 rounded-full bg-[#211827] text-white flex items-center justify-center font-bold text-sm border-2 border-[#7C3AED]">
                         PS
                       </div>
                       <span className="absolute -bottom-0.5 -right-0.5 w-4 h-4 rounded-full bg-emerald-500 border-2 border-white flex items-center justify-center text-[9px] text-white">
@@ -167,8 +167,8 @@ export const Hero: React.FC = () => {
 
                     <div>
                       <div className="flex items-center gap-1.5">
-                        <h4 className="font-bold text-sm text-[#17111F]">Priya S.</h4>
-                        <span className="inline-flex items-center gap-0.5 text-xs font-semibold text-amber-600 bg-amber-50 px-1.5 py-0.2 rounded border border-amber-200">
+                        <h4 className="font-bold text-sm text-[#211827]">Priya S.</h4>
+                        <span className="inline-flex items-center gap-0.5 text-xs font-semibold text-amber-700 bg-amber-50 px-1.5 py-0.2 rounded border border-amber-200">
                           <Star className="w-3 h-3 fill-amber-400 text-amber-400" /> 5.0
                         </span>
                       </div>
@@ -178,29 +178,29 @@ export const Hero: React.FC = () => {
                     </div>
                   </div>
 
-                  <button className="p-2 rounded-xl bg-white border border-[#7C3AED]/30 text-[#7C3AED] hover:bg-[#7C3AED] hover:text-white transition-colors">
+                  <button className="p-2 rounded-xl bg-white border border-[#7C3AED]/30 text-[#7C3AED] hover:bg-[#7C3AED] hover:text-white transition-colors" aria-label="Call driver">
                     <PhoneCall className="w-4 h-4" />
                   </button>
                 </div>
 
                 {/* Trip Stats Grid */}
                 <div className="grid grid-cols-3 gap-2 text-center text-xs">
-                  <div className="p-2 rounded-xl bg-gray-50 border border-gray-100">
+                  <div className="p-2 rounded-xl bg-[#FAF9F7] border border-gray-200/70">
                     <span className="text-[10px] text-[#6B7280] block">ETA</span>
-                    <span className="font-bold text-[#17111F]">3 mins</span>
+                    <span className="font-bold text-[#211827]">3 mins</span>
                   </div>
-                  <div className="p-2 rounded-xl bg-gray-50 border border-gray-100">
+                  <div className="p-2 rounded-xl bg-[#FAF9F7] border border-gray-200/70">
                     <span className="text-[10px] text-[#6B7280] block">Safety Check</span>
                     <span className="font-bold text-emerald-600">Verified</span>
                   </div>
-                  <div className="p-2 rounded-xl bg-gray-50 border border-gray-100">
+                  <div className="p-2 rounded-xl bg-[#FAF9F7] border border-gray-200/70">
                     <span className="text-[10px] text-[#6B7280] block">Ride PIN</span>
                     <span className="font-mono font-bold text-[#7C3AED]">4912</span>
                   </div>
                 </div>
 
                 {/* Live Trip Share indicator */}
-                <div className="px-3 py-2 rounded-xl bg-[#17111F] text-white flex items-center justify-between text-xs font-medium">
+                <div className="px-3 py-2 rounded-xl bg-[#211827] text-white flex items-center justify-between text-xs font-medium">
                   <span className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
                     Auto-Share Trip: Mom & Roommate

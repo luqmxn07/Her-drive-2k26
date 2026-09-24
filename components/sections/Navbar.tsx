@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Shield, Menu, X, ArrowRight } from "lucide-react";
+import Image from "next/image";
+import { Menu, X, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 
@@ -36,26 +37,33 @@ export const Navbar: React.FC = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-[#F8F7F5]/90 backdrop-blur-md shadow-sm border-b border-[#17111F]/10 py-3"
+          ? "bg-[#FAF9F7]/90 backdrop-blur-md shadow-sm border-b border-[#211827]/10 py-3"
           : "bg-transparent py-5"
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Brand Logo */}
+          {/* Brand Logo with Official App Icon */}
           <Link
             href="#hero"
-            className="flex items-center gap-2.5 group focus:outline-none focus:ring-2 focus:ring-[#7C3AED] rounded-lg p-1"
+            className="flex items-center gap-2.5 group focus:outline-none focus:ring-2 focus:ring-[#7C3AED] rounded-xl p-1"
             aria-label="HERDRIVE Home"
           >
-            <div className="w-10 h-10 rounded-xl bg-[#17111F] text-[#EDE9FE] flex items-center justify-center font-bold shadow-md group-hover:bg-[#7C3AED] transition-colors">
-              <Shield className="w-5 h-5 text-[#7C3AED] group-hover:text-white transition-colors" />
+            <div className="w-10 h-10 rounded-xl overflow-hidden shadow-md ring-1 ring-[#7C3AED]/30 group-hover:scale-105 transition-transform duration-200 shrink-0">
+              <Image
+                src="/brand/herdrive icon dark.png"
+                alt="HERDRIVE"
+                width={40}
+                height={40}
+                className="w-full h-full object-cover"
+                priority
+              />
             </div>
             <div className="flex flex-col">
-              <span className="font-extrabold text-xl tracking-tight text-[#17111F] font-manrope">
+              <span className="font-extrabold text-xl tracking-tight text-[#211827] font-manrope">
                 HERDRIVE
               </span>
-              <span className="text-[10px] font-semibold text-[#7C3AED] tracking-wider uppercase -mt-1">
+              <span className="text-[10px] font-bold text-[#7C3AED] tracking-wider uppercase -mt-1">
                 Women Mobility
               </span>
             </div>
@@ -67,7 +75,7 @@ export const Navbar: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-[#171717]/80 hover:text-[#7C3AED] transition-colors py-1 focus:outline-none focus:ring-2 focus:ring-[#7C3AED] rounded-md"
+                className="text-sm font-semibold text-[#242124]/80 hover:text-[#7C3AED] transition-colors py-1 focus:outline-none focus:ring-2 focus:ring-[#7C3AED] rounded-md"
               >
                 {link.name}
               </a>
@@ -77,7 +85,7 @@ export const Navbar: React.FC = () => {
           {/* Right Action CTA */}
           <div className="hidden md:flex items-center gap-4">
             <a href="#waitlist">
-              <Button size="sm" variant="primary" className="gap-2">
+              <Button size="sm" variant="primary" className="gap-2 shadow-md shadow-[#7C3AED]/20">
                 Join Waitlist
                 <ArrowRight className="w-4 h-4" />
               </Button>
@@ -88,14 +96,14 @@ export const Navbar: React.FC = () => {
           <div className="flex md:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2.5 rounded-xl bg-white border border-gray-200 text-[#17111F] hover:bg-[#EDE9FE] focus:outline-none focus:ring-2 focus:ring-[#7C3AED] min-w-[44px] min-h-[44px] flex items-center justify-center"
+              className="p-2.5 rounded-xl bg-white border border-gray-200 text-[#211827] hover:bg-[#EDE9FE] focus:outline-none focus:ring-2 focus:ring-[#7C3AED] min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors"
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileMenuOpen}
             >
               {mobileMenuOpen ? (
                 <X className="w-6 h-6 text-[#7C3AED]" />
               ) : (
-                <Menu className="w-6 h-6 text-[#17111F]" />
+                <Menu className="w-6 h-6 text-[#211827]" />
               )}
             </button>
           </div>
@@ -104,7 +112,7 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Drawer Navigation */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#17111F] text-white border-b border-white/10 px-6 py-6 space-y-4 animate-in slide-in-from-top-5 duration-200 shadow-2xl">
+        <div className="md:hidden bg-[#211827] text-white border-b border-white/10 px-6 py-6 space-y-4 animate-in slide-in-from-top-5 duration-200 shadow-2xl">
           <nav className="flex flex-col space-y-3">
             {navLinks.map((link) => (
               <a

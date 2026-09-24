@@ -31,7 +31,7 @@ export const SOSSlider: React.FC<SOSSliderProps> = ({ className }) => {
   return (
     <div
       className={cn(
-        "rounded-2xl p-4 bg-[#17111F] text-white border border-[#DC2626]/40 shadow-xl",
+        "rounded-2xl p-4 bg-[#211827] text-white border border-[#DC2626]/40 shadow-xl",
         className
       )}
     >

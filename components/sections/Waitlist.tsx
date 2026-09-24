@@ -61,15 +61,15 @@ export const Waitlist: React.FC = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="bg-white rounded-3xl p-8 sm:p-12 shadow-2xl border border-[#7C3AED]/20 relative overflow-hidden"
+          className="bg-[#FAF9F7] rounded-3xl p-8 sm:p-12 shadow-2xl border border-[#7C3AED]/20 relative overflow-hidden"
         >
           {/* Header */}
           <div className="text-center space-y-4 max-w-2xl mx-auto mb-10">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EDE9FE] text-[#7C3AED] text-xs font-bold uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EDE9FE] text-[#7C3AED] text-xs font-bold uppercase tracking-wider border border-[#7C3AED]/20">
               <Sparkles className="w-3.5 h-3.5" /> Early Access Priority
             </div>
 
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#171717] font-manrope tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#242124] font-manrope tracking-tight">
               Be Part of the Next Generation of Safer Mobility.
             </h2>
 
@@ -82,7 +82,7 @@ export const Waitlist: React.FC = () => {
             <form onSubmit={handleSubmit} className="space-y-6 max-w-xl mx-auto" noValidate>
               {/* Name Field */}
               <div className="space-y-1.5">
-                <label htmlFor="waitlist-name" className="text-xs font-bold text-[#171717] uppercase tracking-wider block">
+                <label htmlFor="waitlist-name" className="text-xs font-bold text-[#242124] uppercase tracking-wider block">
                   Full Name <span className="text-[#DC2626]">*</span>
                 </label>
                 <input
@@ -93,7 +93,7 @@ export const Waitlist: React.FC = () => {
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className={`w-full px-4 py-3 rounded-xl border ${
                     errors.name ? "border-[#DC2626] ring-1 ring-[#DC2626]" : "border-gray-300 focus:border-[#7C3AED] focus:ring-2 focus:ring-[#7C3AED]/20"
-                  } bg-white text-[#171717] placeholder-gray-400 text-sm outline-none transition-all`}
+                  } bg-white text-[#242124] placeholder-gray-400 text-sm outline-none transition-all`}
                 />
                 {errors.name && (
                   <p className="text-xs text-[#DC2626] font-medium flex items-center gap-1">
@@ -105,7 +105,7 @@ export const Waitlist: React.FC = () => {
               {/* Email & Phone Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-1.5">
-                  <label htmlFor="waitlist-email" className="text-xs font-bold text-[#171717] uppercase tracking-wider block">
+                  <label htmlFor="waitlist-email" className="text-xs font-bold text-[#242124] uppercase tracking-wider block">
                     Email Address <span className="text-[#DC2626]">*</span>
                   </label>
                   <input
@@ -116,7 +116,7 @@ export const Waitlist: React.FC = () => {
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className={`w-full px-4 py-3 rounded-xl border ${
                       errors.email ? "border-[#DC2626] ring-1 ring-[#DC2626]" : "border-gray-300 focus:border-[#7C3AED] focus:ring-2 focus:ring-[#7C3AED]/20"
-                    } bg-white text-[#171717] placeholder-gray-400 text-sm outline-none transition-all`}
+                    } bg-white text-[#242124] placeholder-gray-400 text-sm outline-none transition-all`}
                   />
                   {errors.email && (
                     <p className="text-xs text-[#DC2626] font-medium flex items-center gap-1">
@@ -126,7 +126,7 @@ export const Waitlist: React.FC = () => {
                 </div>
 
                 <div className="space-y-1.5">
-                  <label htmlFor="waitlist-phone" className="text-xs font-bold text-[#171717] uppercase tracking-wider block">
+                  <label htmlFor="waitlist-phone" className="text-xs font-bold text-[#242124] uppercase tracking-wider block">
                     Phone Number <span className="text-gray-400 font-normal">(Optional)</span>
                   </label>
                   <input
@@ -135,14 +135,14 @@ export const Waitlist: React.FC = () => {
                     placeholder="+91 98765 43210"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#7C3AED] focus:ring-2 focus:ring-[#7C3AED]/20 bg-white text-[#171717] placeholder-gray-400 text-sm outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#7C3AED] focus:ring-2 focus:ring-[#7C3AED]/20 bg-white text-[#242124] placeholder-gray-400 text-sm outline-none transition-all"
                   />
                 </div>
               </div>
 
               {/* Role Selection Radio Pill Buttons */}
               <div className="space-y-2">
-                <span className="text-xs font-bold text-[#171717] uppercase tracking-wider block">
+                <span className="text-xs font-bold text-[#242124] uppercase tracking-wider block">
                   I am interested as:
                 </span>
                 <div className="grid grid-cols-3 gap-3">
@@ -154,7 +154,7 @@ export const Waitlist: React.FC = () => {
                       className={`py-2.5 px-3 rounded-xl text-xs font-bold capitalize transition-all border ${
                         formData.role === r
                           ? "bg-[#7C3AED] text-white border-[#7C3AED] shadow-md"
-                          : "bg-gray-50 text-[#171717] border-gray-200 hover:bg-[#EDE9FE]"
+                          : "bg-white text-[#242124] border-gray-200 hover:bg-[#EDE9FE]"
                       }`}
                     >
                       {r}
@@ -205,8 +205,8 @@ export const Waitlist: React.FC = () => {
               </div>
 
               <div className="text-center pt-2">
-                <span className="text-[11px] text-gray-400 flex items-center justify-center gap-1">
-                  <Lock className="w-3 h-3 text-emerald-500" /> Your information is kept strictly private. Zero spam.
+                <span className="text-[11px] text-gray-500 flex items-center justify-center gap-1">
+                  <Lock className="w-3 h-3 text-emerald-600" /> Your information is kept strictly private. Zero spam.
                 </span>
               </div>
             </form>
@@ -220,12 +220,12 @@ export const Waitlist: React.FC = () => {
               <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto shadow-md">
                 <CheckCircle2 className="w-10 h-10" />
               </div>
-              <h3 className="text-2xl font-bold text-[#171717] font-manrope">
+              <h3 className="text-2xl font-bold text-[#242124] font-manrope">
                 Thank You for Joining!
               </h3>
               <p className="text-sm text-[#6B7280] leading-relaxed">
                 You've been added to the priority HERDRIVE waitlist as a{" "}
-                <span className="font-bold text-[#7C3AED] capitalize">{formData.role}</span>. We will contact you at <span className="font-semibold text-[#171717]">{formData.email}</span> as soon as early access opens in your city.
+                <span className="font-bold text-[#7C3AED] capitalize">{formData.role}</span>. We will contact you at <span className="font-semibold text-[#242124]">{formData.email}</span> as soon as early access opens in your city.
               </p>
               <div className="pt-4">
                 <Button

@@ -25,12 +25,12 @@ export const DriverExperience: React.FC = () => {
     "Transparent commission structure with instant digital payouts",
     "Enhanced security with verified female passengers & Ride PINs",
     "Dedicated driver safety equipment & responsible-use training",
-    "24/7 direct access to Safety Operations Center (SOC)",
+    "24/7 direct safety support line & emergency assistance",
     "Comprehensive onboarding, vehicle assistance, & career support",
   ];
 
   return (
-    <section id="drivers" className="py-20 md:py-28 bg-[#EDE9FE]/20 relative">
+    <section id="drivers" className="py-20 md:py-28 bg-[#EDE9FE]/25 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Column: Driver Dashboard UI Mockup (Left aligned per wireframe) */}
@@ -45,7 +45,7 @@ export const DriverExperience: React.FC = () => {
               {/* Driver App Internal View */}
               <div className="p-4 space-y-4 text-white">
                 {/* Online Status Toggle Bar */}
-                <div className="p-3 rounded-2xl bg-slate-900 border border-slate-800 flex items-center justify-between">
+                <div className="p-3 rounded-2xl bg-[#211827] border border-white/10 flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <span className="w-3 h-3 rounded-full bg-emerald-400 animate-ping" />
                     <span className="font-bold text-sm text-emerald-400 tracking-wide uppercase">
@@ -79,7 +79,7 @@ export const DriverExperience: React.FC = () => {
                 </div>
 
                 {/* New Ride Request Dispatch Card */}
-                <div className="p-4 rounded-2xl bg-slate-900 border-2 border-[#7C3AED] shadow-2xl space-y-3 animate-in zoom-in-95 duration-200">
+                <div className="p-4 rounded-2xl bg-[#211827] border-2 border-[#7C3AED] shadow-2xl space-y-3 animate-in zoom-in-95 duration-200">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-bold text-[#7C3AED] uppercase tracking-wider flex items-center gap-1">
                       <span className="w-2 h-2 rounded-full bg-[#7C3AED] animate-pulse" />
@@ -103,7 +103,7 @@ export const DriverExperience: React.FC = () => {
 
                   {/* Accept / Decline Action Buttons */}
                   <div className="grid grid-cols-2 gap-2 pt-2">
-                    <button className="py-2.5 px-3 rounded-xl bg-slate-800 text-gray-300 font-semibold text-xs border border-slate-700 hover:bg-slate-700 flex items-center justify-center gap-1">
+                    <button className="py-2.5 px-3 rounded-xl bg-white/10 text-gray-300 font-semibold text-xs border border-white/15 hover:bg-white/20 flex items-center justify-center gap-1">
                       <X className="w-4 h-4 text-rose-400" /> Decline
                     </button>
                     <button className="py-2.5 px-3 rounded-xl bg-[#7C3AED] text-white font-bold text-xs shadow-md hover:bg-[#6D28D9] flex items-center justify-center gap-1">
@@ -113,7 +113,7 @@ export const DriverExperience: React.FC = () => {
                 </div>
 
                 {/* Driver Safety Tools Pill */}
-                <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between text-xs">
+                <div className="p-3 rounded-xl bg-[#211827] border border-white/10 flex items-center justify-between text-xs">
                   <span className="text-gray-300 font-medium flex items-center gap-2">
                     <ShieldCheck className="w-4 h-4 text-[#7C3AED]" />
                     Driver Safety Toolkit
@@ -134,11 +134,11 @@ export const DriverExperience: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="lg:col-span-6 order-1 lg:order-2 space-y-6 text-left"
           >
-            <span className="text-xs font-bold tracking-widest text-[#7C3AED] uppercase bg-white px-3.5 py-1.5 rounded-full border border-[#7C3AED]/20 shadow-sm">
+            <span className="text-xs font-bold tracking-widest text-[#7C3AED] uppercase bg-white px-3.5 py-1.5 rounded-full border border-[#7C3AED]/20 shadow-xs">
               Driver Opportunity
             </span>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#171717] font-manrope tracking-tight leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#242124] font-manrope tracking-tight leading-tight">
               More Than a Ride. <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7C3AED] to-[#5B21B6]">
                 An Earning Opportunity.
@@ -152,7 +152,7 @@ export const DriverExperience: React.FC = () => {
             {/* Benefits List */}
             <div className="space-y-3 pt-2">
               {driverBenefits.map((benefit, idx) => (
-                <div key={idx} className="flex items-start gap-3 text-sm text-[#171717]">
+                <div key={idx} className="flex items-start gap-3 text-sm text-[#242124]">
                   <CheckCircle2 className="w-4 h-4 text-[#7C3AED] shrink-0 mt-0.5" />
                   <span className="font-medium">{benefit}</span>
                 </div>
