@@ -111,5 +111,29 @@
     },
     "security_scan": "PASS",
     "stable": true
+  },
+  {
+    "date": "2026-09-24",
+    "time": "22:42",
+    "timezone": "Asia/Kolkata",
+    "commit_message": "feat: update HERDRIVE frontend with new brand identity",
+    "summary": "Visual brand update with new HERDRIVE assets, centralized soft pink + lavender + purple + deep plum color system, and refreshed landing page sections",
+    "files_changed": [
+      "app/globals.css",
+      "app/layout.tsx",
+      "app/page.tsx",
+      "components/ui/*",
+      "components/sections/*",
+      "public/brand/*",
+      "docs/CHANGELOG.md",
+      "docs/commit-history.json"
+    ],
+    "validation": {
+      "build": "PASS",
+      "lint": "PASS",
+      "tests": "N/A"
+    },
+    "security_scan": "PASS",
+    "stable": true
   }
 ]

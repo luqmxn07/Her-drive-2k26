@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Users, Heart, Shield, Sparkles, CheckCircle2 } from "lucide-react";
+import { Users, Heart, Shield, Sparkles } from "lucide-react";
 import { Card } from "@/components/ui/Card";
 
 export const Community: React.FC = () => {
@@ -30,11 +30,11 @@ export const Community: React.FC = () => {
   ];
 
   return (
-    <section id="community" className="py-20 md:py-28 bg-[#FAF9F7] dark:bg-[#17111F] relative transition-colors duration-300">
+    <section id="community" className="py-20 md:py-28 bg-[#FAF9F7] dark:bg-[#0F0524] relative transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span className="text-xs font-bold tracking-widest text-[#7C3AED] dark:text-[#EDE9FE] uppercase bg-[#EDE9FE] dark:bg-[#7C3AED]/20 px-3.5 py-1.5 rounded-full border border-[#7C3AED]/20">
+          <span className="text-xs font-bold tracking-widest text-[#A855F7] dark:text-[#F472B6] uppercase bg-[#FDE7F3] dark:bg-[#1E0B3D] px-3.5 py-1.5 rounded-full border border-[#F472B6]/25">
             Community & Values
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#242124] dark:text-white font-manrope tracking-tight">
@@ -57,9 +57,9 @@ export const Community: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.1 }}
               >
-                <Card variant="white" className="h-full space-y-4 border-gray-200/90 dark:border-white/10 shadow-xs hover:-translate-y-1 transition-all duration-300">
-                  <div className="w-12 h-12 rounded-xl bg-[#EDE9FE] dark:bg-[#7C3AED]/20 text-[#7C3AED] dark:text-[#EDE9FE] flex items-center justify-center font-bold">
-                    <IconComp className="w-6 h-6" />
+                <Card variant="white" className="h-full space-y-4 border-gray-200/90 dark:border-[#2D1B4E] shadow-xs hover:border-[#F472B6]/40 hover:-translate-y-1 transition-all duration-300">
+                  <div className="w-12 h-12 rounded-xl bg-[#FDE7F3] dark:bg-[#2D1B4E] text-[#A855F7] dark:text-[#F472B6] flex items-center justify-center font-bold">
+                    <IconComp className="w-6 h-6 text-[#A855F7] dark:text-[#F472B6]" />
                   </div>
                   <h3 className="font-bold text-lg text-[#242124] dark:text-white font-manrope">
                     {val.title}

@@ -8,7 +8,6 @@ import {
   UserCheck,
   Lock,
   Navigation,
-  ArrowRight,
 } from "lucide-react";
 
 export const HowItWorks: React.FC = () => {
@@ -51,11 +50,11 @@ export const HowItWorks: React.FC = () => {
   ];
 
   return (
-    <section id="how-it-works" className="py-20 md:py-28 bg-[#FAF9F7] dark:bg-[#17111F] relative transition-colors duration-300">
+    <section id="how-it-works" className="py-20 md:py-28 bg-[#FAF9F7] dark:bg-[#0F0524] relative transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span className="text-xs font-bold tracking-widest text-[#7C3AED] dark:text-[#EDE9FE] uppercase bg-[#EDE9FE] dark:bg-[#7C3AED]/20 px-3.5 py-1.5 rounded-full border border-[#7C3AED]/20">
+          <span className="text-xs font-bold tracking-widest text-[#A855F7] dark:text-[#F472B6] uppercase bg-[#FDE7F3] dark:bg-[#1E0B3D] px-3.5 py-1.5 rounded-full border border-[#F472B6]/25">
             Simple & Transparent
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#242124] dark:text-white font-manrope tracking-tight">
@@ -68,8 +67,8 @@ export const HowItWorks: React.FC = () => {
 
         {/* Desktop Horizontal Timeline (Hidden on Mobile) */}
         <div className="hidden lg:block relative py-8">
-          {/* Horizontal Connecting Line */}
-          <div className="absolute top-1/2 left-12 right-12 h-1 bg-[#EDE9FE] dark:bg-white/10 -translate-y-6 z-0" />
+          {/* Horizontal Connecting Line with Pink/Lavender Gradient */}
+          <div className="absolute top-1/2 left-12 right-12 h-1 bg-gradient-to-r from-[#A855F7]/30 via-[#F472B6]/30 to-[#FB7185]/30 -translate-y-6 z-0" />
 
           <div className="grid grid-cols-5 gap-4 relative z-10">
             {steps.map((step, idx) => {
@@ -84,9 +83,9 @@ export const HowItWorks: React.FC = () => {
                   className="flex flex-col items-center text-center space-y-4 group"
                 >
                   {/* Step Number Circle */}
-                  <div className="w-14 h-14 rounded-2xl bg-[#211827] text-white flex items-center justify-center font-bold text-lg shadow-md group-hover:bg-[#7C3AED] group-hover:scale-105 transition-all duration-300 relative border-4 border-[#FAF9F7] dark:border-[#17111F]">
-                    <IconComponent className="w-6 h-6 text-[#7C3AED] group-hover:text-white transition-colors" />
-                    <span className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-[#7C3AED] text-white text-xs font-bold flex items-center justify-center border-2 border-[#FAF9F7] dark:border-[#17111F]">
+                  <div className="w-14 h-14 rounded-2xl bg-[#1E0B3D] text-white flex items-center justify-center font-bold text-lg shadow-md group-hover:bg-gradient-to-r group-hover:from-[#A855F7] group-hover:to-[#F472B6] group-hover:scale-105 transition-all duration-300 relative border-4 border-[#FAF9F7] dark:border-[#0F0524]">
+                    <IconComponent className="w-6 h-6 text-[#F472B6] group-hover:text-white transition-colors" />
+                    <span className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-[#F472B6] text-white text-xs font-bold flex items-center justify-center border-2 border-[#FAF9F7] dark:border-[#0F0524] shadow-xs">
                       {step.number}
                     </span>
                   </div>
@@ -103,7 +102,7 @@ export const HowItWorks: React.FC = () => {
 
                   {/* UI Snippet Tag */}
                   <div className="pt-2">
-                    <span className="text-[11px] font-mono font-semibold px-2.5 py-1 rounded-md bg-[#EDE9FE] dark:bg-[#7C3AED]/20 text-[#7C3AED] dark:text-[#EDE9FE] border border-[#7C3AED]/20 shadow-xs">
+                    <span className="text-[11px] font-mono font-semibold px-2.5 py-1 rounded-md bg-[#FDE7F3] dark:bg-[#1E0B3D] text-[#A855F7] dark:text-[#F472B6] border border-[#F472B6]/25 shadow-xs">
                       {step.snippet}
                     </span>
                   </div>
@@ -116,7 +115,7 @@ export const HowItWorks: React.FC = () => {
         {/* Mobile Vertical Timeline (Visible on Mobile/Tablet) */}
         <div className="lg:hidden relative pl-6 space-y-8 py-4">
           {/* Vertical Line */}
-          <div className="absolute top-4 bottom-4 left-[27px] w-1 bg-[#EDE9FE] dark:bg-white/10" />
+          <div className="absolute top-4 bottom-4 left-[27px] w-1 bg-gradient-to-b from-[#A855F7]/30 via-[#F472B6]/30 to-[#FB7185]/30" />
 
           {steps.map((step, idx) => {
             const IconComponent = step.icon;
@@ -130,17 +129,17 @@ export const HowItWorks: React.FC = () => {
                 className="relative flex items-start gap-4"
               >
                 {/* Number Circle */}
-                <div className="w-10 h-10 rounded-xl bg-[#211827] text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-md border-2 border-[#FAF9F7] dark:border-[#17111F] z-10">
-                  <IconComponent className="w-5 h-5 text-[#7C3AED]" />
+                <div className="w-10 h-10 rounded-xl bg-[#1E0B3D] text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-md border-2 border-[#FAF9F7] dark:border-[#0F0524] z-10">
+                  <IconComponent className="w-5 h-5 text-[#F472B6]" />
                 </div>
 
                 {/* Content Card */}
-                <div className="bg-white dark:bg-[#211827] p-5 rounded-2xl border border-gray-200/90 dark:border-white/10 shadow-xs flex-1 space-y-2">
+                <div className="bg-white dark:bg-[#1E0B3D] p-5 rounded-2xl border border-gray-200/90 dark:border-[#2D1B4E] shadow-xs flex-1 space-y-2">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-bold text-[#7C3AED] dark:text-[#EDE9FE] uppercase">
+                    <span className="text-xs font-bold text-[#A855F7] dark:text-[#F472B6] uppercase">
                       Step {step.number}
                     </span>
-                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#EDE9FE] dark:bg-[#7C3AED]/20 text-[#7C3AED] dark:text-[#EDE9FE] font-semibold">
+                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#FDE7F3] dark:bg-[#0F0524] text-[#A855F7] dark:text-[#F472B6] font-semibold border border-[#F472B6]/20">
                       {step.snippet}
                     </span>
                   </div>

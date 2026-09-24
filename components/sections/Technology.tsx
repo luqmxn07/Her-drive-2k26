@@ -49,20 +49,20 @@ export const Technology: React.FC = () => {
   ];
 
   return (
-    <section id="technology" className="py-20 md:py-28 bg-[#211827] text-white relative overflow-hidden">
-      {/* Background glow effects */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#7C3AED]/15 rounded-full blur-[160px] pointer-events-none" />
+    <section id="technology" className="py-20 md:py-28 bg-[#0F0524] text-white relative overflow-hidden border-t border-[#2D1B4E]">
+      {/* Background glow effects in deep plum & purple */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-br from-[#7C3AED]/15 to-[#F472B6]/10 rounded-full blur-[160px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span className="text-xs font-bold tracking-widest text-[#EDE9FE] uppercase bg-white/10 px-3.5 py-1.5 rounded-full border border-white/20">
+          <span className="text-xs font-bold tracking-widest text-[#F472B6] uppercase bg-[#1E0B3D] px-3.5 py-1.5 rounded-full border border-[#2D1B4E]">
             Technology Infrastructure
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white font-manrope tracking-tight">
             Engineered for Safety & Trust.
           </h2>
-          <p className="text-base sm:text-lg text-gray-300">
+          <p className="text-base sm:text-lg text-[#D1C4E9]">
             Technology connects every part of the journey — from verified onboarding and ride matching to live tracking, payments, and safety response.
           </p>
         </div>
@@ -75,10 +75,10 @@ export const Technology: React.FC = () => {
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="p-5 rounded-2xl bg-white/5 border border-[#7C3AED]/30 flex items-center gap-4 shadow-lg backdrop-blur-sm"
+              className="p-5 rounded-2xl bg-[#1E0B3D]/80 border border-[#2D1B4E] hover:border-[#F472B6]/40 transition-colors flex items-center gap-4 shadow-lg backdrop-blur-sm"
             >
-              <div className="w-12 h-12 rounded-xl bg-[#7C3AED]/20 text-[#EDE9FE] flex items-center justify-center font-bold border border-[#7C3AED]/40 shrink-0">
-                <Smartphone className="w-6 h-6 text-[#7C3AED]" />
+              <div className="w-12 h-12 rounded-xl bg-[#2D1B4E] text-[#F472B6] flex items-center justify-center font-bold border border-[#F472B6]/30 shrink-0">
+                <Smartphone className="w-6 h-6 text-[#F472B6]" />
               </div>
               <div>
                 <h3 className="font-bold text-base text-white font-manrope">Passenger Application</h3>
@@ -91,10 +91,10 @@ export const Technology: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="p-5 rounded-2xl bg-white/5 border border-[#7C3AED]/30 flex items-center gap-4 shadow-lg backdrop-blur-sm"
+              className="p-5 rounded-2xl bg-[#1E0B3D]/80 border border-[#2D1B4E] hover:border-[#F472B6]/40 transition-colors flex items-center gap-4 shadow-lg backdrop-blur-sm"
             >
-              <div className="w-12 h-12 rounded-xl bg-[#7C3AED]/20 text-[#EDE9FE] flex items-center justify-center font-bold border border-[#7C3AED]/40 shrink-0">
-                <Smartphone className="w-6 h-6 text-[#7C3AED]" />
+              <div className="w-12 h-12 rounded-xl bg-[#2D1B4E] text-[#F472B6] flex items-center justify-center font-bold border border-[#F472B6]/30 shrink-0">
+                <Smartphone className="w-6 h-6 text-[#F472B6]" />
               </div>
               <div>
                 <h3 className="font-bold text-base text-white font-manrope">Driver Application</h3>
@@ -105,8 +105,8 @@ export const Technology: React.FC = () => {
 
           {/* Downward Connector Line */}
           <div className="flex justify-center my-2">
-            <div className="w-10 h-10 rounded-full bg-[#7C3AED]/20 border border-[#7C3AED]/40 flex items-center justify-center text-[#EDE9FE] animate-bounce">
-              <ArrowDown className="w-5 h-5 text-[#7C3AED]" />
+            <div className="w-10 h-10 rounded-full bg-[#1E0B3D] border border-[#F472B6]/40 flex items-center justify-center text-[#F472B6] animate-bounce">
+              <ArrowDown className="w-5 h-5 text-[#F472B6]" />
             </div>
           </div>
 
@@ -115,24 +115,24 @@ export const Technology: React.FC = () => {
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="p-8 rounded-3xl bg-gradient-to-br from-slate-900 to-[#211827] border-2 border-[#7C3AED]/50 shadow-2xl space-y-6 relative overflow-hidden"
+            className="p-8 rounded-3xl bg-gradient-to-br from-[#1E0B3D] via-[#160829] to-[#0F0524] border-2 border-[#A855F7]/40 shadow-2xl space-y-6 relative overflow-hidden"
           >
-            <div className="flex items-center justify-between border-b border-white/10 pb-4">
+            <div className="flex items-center justify-between border-b border-[#2D1B4E] pb-4">
               <div className="flex items-center gap-3">
-                <div className="p-2 rounded-xl bg-[#7C3AED] text-white">
+                <div className="p-2 rounded-xl bg-gradient-to-r from-[#7C3AED] to-[#F472B6] text-white">
                   <Server className="w-5 h-5" />
                 </div>
                 <div>
                   <h3 className="font-extrabold text-xl text-white font-manrope">
                     HERDRIVE PLATFORM
                   </h3>
-                  <span className="text-xs text-[#EDE9FE]">
+                  <span className="text-xs text-[#D1C4E9]">
                     Real-time Journey & Safety Orchestration Engine
                   </span>
                 </div>
               </div>
 
-              <span className="text-xs font-mono font-bold px-3 py-1 rounded-full bg-[#7C3AED]/20 text-[#EDE9FE] border border-[#7C3AED]/30">
+              <span className="text-xs font-mono font-bold px-3 py-1 rounded-full bg-[#F472B6]/15 text-[#F472B6] border border-[#F472B6]/30">
                 Live Journey Sync
               </span>
             </div>
@@ -144,10 +144,10 @@ export const Technology: React.FC = () => {
                 return (
                   <div
                     key={feat.id}
-                    className="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-[#7C3AED]/50 transition-colors space-y-2"
+                    className="p-4 rounded-xl bg-[#0F0524]/60 border border-[#2D1B4E] hover:border-[#F472B6]/40 transition-colors space-y-2"
                   >
                     <div className="flex items-center gap-2">
-                      <IconComp className="w-4 h-4 text-[#7C3AED]" />
+                      <IconComp className="w-4 h-4 text-[#F472B6]" />
                       <h4 className="font-bold text-xs text-white">{feat.title}</h4>
                     </div>
                     <p className="text-[11px] text-gray-400 leading-snug">{feat.desc}</p>
@@ -159,8 +159,8 @@ export const Technology: React.FC = () => {
 
           {/* Downward Connector Line */}
           <div className="flex justify-center my-2">
-            <div className="w-10 h-10 rounded-full bg-[#7C3AED]/20 border border-[#7C3AED]/40 flex items-center justify-center text-[#EDE9FE]">
-              <ArrowDown className="w-5 h-5 text-[#7C3AED]" />
+            <div className="w-10 h-10 rounded-full bg-[#1E0B3D] border border-[#F472B6]/40 flex items-center justify-center text-[#F472B6]">
+              <ArrowDown className="w-5 h-5 text-[#F472B6]" />
             </div>
           </div>
 
@@ -169,15 +169,15 @@ export const Technology: React.FC = () => {
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="p-6 rounded-2xl bg-[#EDE9FE]/10 border border-[#7C3AED]/40 text-center space-y-2 backdrop-blur-md"
+            className="p-6 rounded-2xl bg-[#1E0B3D]/70 border border-[#F472B6]/30 text-center space-y-2 backdrop-blur-md"
           >
-            <div className="inline-flex items-center justify-center p-3 rounded-full bg-[#7C3AED] text-white mb-1 shadow-lg">
+            <div className="inline-flex items-center justify-center p-3 rounded-full bg-gradient-to-r from-[#A855F7] to-[#F472B6] text-white mb-1 shadow-lg">
               <HeartHandshake className="w-6 h-6" />
             </div>
             <h3 className="font-extrabold text-lg text-white font-manrope">
               TRUST, SAFETY & COMMUNITY SUPPORT
             </h3>
-            <p className="text-xs text-gray-300 max-w-xl mx-auto">
+            <p className="text-xs text-[#D1C4E9] max-w-xl mx-auto">
               Delivering verified community participation, dedicated safety review oversight, and prompt emergency resolution.
             </p>
           </motion.div>

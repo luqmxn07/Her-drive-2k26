@@ -3,25 +3,22 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useTheme } from "@/context/ThemeContext";
 
 export const Footer: React.FC = () => {
-  const { theme } = useTheme();
-
   return (
-    <footer className="bg-[#211827] dark:bg-[#17111F] text-white pt-16 pb-12 border-t border-white/10 transition-colors duration-300">
+    <footer className="bg-[#0F0524] text-white pt-16 pb-12 border-t border-[#2D1B4E] transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Brand Info with Official App Icon */}
           <div className="lg:col-span-2 space-y-4">
             <Link href="#hero" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 rounded-xl overflow-hidden shadow-md ring-1 ring-[#7C3AED]/40 group-hover:scale-105 transition-transform duration-200 shrink-0">
+              <div className="w-10 h-10 rounded-xl overflow-hidden shadow-md ring-1 ring-[#F472B6]/40 group-hover:scale-105 transition-transform duration-200 shrink-0">
                 <Image
-                  src={theme === "dark" ? "/brand/herdrive icon dark.png" : "/brand/herdrive icon light.png"}
+                  src="/brand/her-drive-dark.png"
                   alt="HERDRIVE Logo"
                   width={40}
                   height={40}
-                  className="w-full h-full object-cover transition-opacity duration-300"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <span className="font-extrabold text-2xl tracking-tight text-white font-manrope">
@@ -29,7 +26,7 @@ export const Footer: React.FC = () => {
               </span>
             </Link>
 
-            <p className="text-sm font-semibold text-[#EDE9FE] font-manrope">
+            <p className="text-sm font-semibold text-[#F472B6] font-manrope">
               Move Freely. Ride Confidently.
             </p>
 
@@ -41,7 +38,7 @@ export const Footer: React.FC = () => {
             <div className="flex items-center gap-3 pt-2">
               <a
                 href="#"
-                className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-300 hover:text-[#7C3AED] hover:border-[#7C3AED] transition-colors"
+                className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-300 hover:text-[#F472B6] hover:border-[#F472B6] transition-colors"
                 aria-label="Instagram"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -50,7 +47,7 @@ export const Footer: React.FC = () => {
               </a>
               <a
                 href="#"
-                className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-300 hover:text-[#7C3AED] hover:border-[#7C3AED] transition-colors"
+                className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-300 hover:text-[#F472B6] hover:border-[#F472B6] transition-colors"
                 aria-label="LinkedIn"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -59,7 +56,7 @@ export const Footer: React.FC = () => {
               </a>
               <a
                 href="#"
-                className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-300 hover:text-[#7C3AED] hover:border-[#7C3AED] transition-colors"
+                className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-300 hover:text-[#F472B6] hover:border-[#F472B6] transition-colors"
                 aria-label="YouTube"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -71,32 +68,32 @@ export const Footer: React.FC = () => {
 
           {/* Quick Links Column */}
           <div className="space-y-3">
-            <h4 className="text-xs font-bold text-[#EDE9FE] uppercase tracking-wider font-manrope">
+            <h4 className="text-xs font-bold text-[#F472B6] uppercase tracking-wider font-manrope">
               Navigation
             </h4>
-            <ul className="space-y-2 text-xs text-gray-400">
+            <ul className="space-y-2 text-xs text-gray-300">
               <li>
-                <a href="#hero" className="hover:text-white transition-colors">
+                <a href="#hero" className="hover:text-[#F472B6] transition-colors">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#how-it-works" className="hover:text-white transition-colors">
+                <a href="#how-it-works" className="hover:text-[#F472B6] transition-colors">
                   How It Works
                 </a>
               </li>
               <li>
-                <a href="#safety" className="hover:text-white transition-colors">
+                <a href="#safety" className="hover:text-[#F472B6] transition-colors">
                   Safety System
                 </a>
               </li>
               <li>
-                <a href="#passenger" className="hover:text-white transition-colors">
+                <a href="#passenger" className="hover:text-[#F472B6] transition-colors">
                   For Passengers
                 </a>
               </li>
               <li>
-                <a href="#drivers" className="hover:text-white transition-colors">
+                <a href="#drivers" className="hover:text-[#F472B6] transition-colors">
                   For Drivers
                 </a>
               </li>
@@ -105,22 +102,22 @@ export const Footer: React.FC = () => {
 
           {/* Company & Trust Column */}
           <div className="space-y-3">
-            <h4 className="text-xs font-bold text-[#EDE9FE] uppercase tracking-wider font-manrope">
+            <h4 className="text-xs font-bold text-[#F472B6] uppercase tracking-wider font-manrope">
               Platform
             </h4>
-            <ul className="space-y-2 text-xs text-gray-400">
+            <ul className="space-y-2 text-xs text-gray-300">
               <li>
-                <a href="#technology" className="hover:text-white transition-colors">
+                <a href="#technology" className="hover:text-[#F472B6] transition-colors">
                   Technology & Trust
                 </a>
               </li>
               <li>
-                <a href="#community" className="hover:text-white transition-colors">
+                <a href="#community" className="hover:text-[#F472B6] transition-colors">
                   Community Values
                 </a>
               </li>
               <li>
-                <a href="#waitlist" className="hover:text-white transition-colors">
+                <a href="#waitlist" className="hover:text-[#F472B6] transition-colors">
                   Priority Waitlist
                 </a>
               </li>
@@ -129,27 +126,27 @@ export const Footer: React.FC = () => {
 
           {/* Legal Column */}
           <div className="space-y-3">
-            <h4 className="text-xs font-bold text-[#EDE9FE] uppercase tracking-wider font-manrope">
+            <h4 className="text-xs font-bold text-[#F472B6] uppercase tracking-wider font-manrope">
               Legal & Policy
             </h4>
-            <ul className="space-y-2 text-xs text-gray-400">
+            <ul className="space-y-2 text-xs text-gray-300">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="#" className="hover:text-[#F472B6] transition-colors">
                   Privacy Policy (DPDP Act)
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="#" className="hover:text-[#F472B6] transition-colors">
                   Terms & Conditions
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="#" className="hover:text-[#F472B6] transition-colors">
                   Driver Guidelines & Terms
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="#" className="hover:text-[#F472B6] transition-colors">
                   Safety Operations Policy
                 </a>
               </li>
@@ -158,7 +155,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Copyright & Disclaimer */}
-        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+        <div className="pt-8 border-t border-[#2D1B4E] flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 gap-4">
           <p>© 2026 HERDRIVE Platform. All rights reserved.</p>
           <p className="text-[11px] text-gray-400">
             HERDRIVE is a registered mobility trademark. Conceptual UI representations.

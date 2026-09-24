@@ -62,14 +62,14 @@ export const Solution: React.FC = () => {
   ];
 
   return (
-    <section id="solution" className="py-20 md:py-28 bg-[#EDE9FE]/30 dark:bg-[#211827] relative overflow-hidden transition-colors duration-300">
-      {/* Background graphic elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#7C3AED]/10 rounded-full blur-3xl pointer-events-none" />
+    <section id="solution" className="py-20 md:py-28 bg-gradient-to-b from-[#FFF5F9]/70 via-[#FAF9F7] to-[#FAF9F7] dark:from-[#1E0B3D]/70 dark:via-[#190A2E] dark:to-[#0F0524] relative overflow-hidden transition-colors duration-300">
+      {/* Background ambient glow */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-[#F472B6]/15 to-[#A855F7]/15 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span className="text-xs font-bold tracking-widest text-[#7C3AED] dark:text-[#EDE9FE] uppercase bg-white dark:bg-white/10 px-3.5 py-1.5 rounded-full border border-[#7C3AED]/20 shadow-xs">
+          <span className="text-xs font-bold tracking-widest text-[#A855F7] dark:text-[#F472B6] uppercase bg-[#FDE7F3] dark:bg-[#1E0B3D] px-3.5 py-1.5 rounded-full border border-[#F472B6]/25 shadow-xs">
             Our Approach
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#242124] dark:text-white font-manrope tracking-tight">
@@ -94,14 +94,14 @@ export const Solution: React.FC = () => {
               >
                 <Card
                   variant="white"
-                  className="h-full border-[#7C3AED]/20 hover:border-[#7C3AED] hover:-translate-y-1 transition-all duration-300 p-8 flex flex-col justify-between shadow-sm"
+                  className="h-full border-gray-200/80 dark:border-[#2D1B4E] hover:border-[#F472B6]/60 hover:-translate-y-1 transition-all duration-300 p-8 flex flex-col justify-between shadow-sm"
                 >
                   <div className="space-y-6">
                     <div className="flex items-start justify-between">
-                      <div className="w-14 h-14 rounded-2xl bg-[#211827] text-[#EDE9FE] flex items-center justify-center font-bold shadow-md">
-                        <IconComponent className="w-7 h-7 text-[#7C3AED]" />
+                      <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#7C3AED] to-[#F472B6] text-white flex items-center justify-center font-bold shadow-md">
+                        <IconComponent className="w-7 h-7 text-white" />
                       </div>
-                      <span className="text-xs font-bold text-[#7C3AED] dark:text-[#EDE9FE] bg-[#EDE9FE] dark:bg-[#7C3AED]/20 px-3 py-1 rounded-full border border-[#7C3AED]/20">
+                      <span className="text-xs font-bold text-[#A855F7] dark:text-[#F472B6] bg-[#FDE7F3] dark:bg-[#2D1B4E] px-3 py-1 rounded-full border border-[#F472B6]/20">
                         {pillar.subtitle}
                       </span>
                     </div>
@@ -119,7 +119,7 @@ export const Solution: React.FC = () => {
                     <div className="pt-2 space-y-2.5">
                       {pillar.bullets.map((bullet, i) => (
                         <div key={i} className="flex items-center gap-2 text-sm text-[#242124] dark:text-gray-200">
-                          <div className="w-4 h-4 rounded-full bg-[#7C3AED]/10 dark:bg-[#7C3AED]/30 text-[#7C3AED] dark:text-[#EDE9FE] flex items-center justify-center shrink-0">
+                          <div className="w-4 h-4 rounded-full bg-[#FDE7F3] dark:bg-[#2D1B4E] text-[#A855F7] dark:text-[#F472B6] flex items-center justify-center shrink-0">
                             <Check className="w-3 h-3 stroke-[3]" />
                           </div>
                           <span>{bullet}</span>

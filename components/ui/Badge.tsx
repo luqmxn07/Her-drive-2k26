@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 interface BadgeProps {
   children: React.ReactNode;
-  variant?: "violet" | "plum" | "green" | "lavender" | "emergency" | "neutral";
+  variant?: "violet" | "plum" | "pink" | "lavender" | "green" | "emergency" | "neutral";
   size?: "sm" | "md";
   icon?: React.ReactNode;
   className?: string;
@@ -22,12 +22,20 @@ export const Badge: React.FC<BadgeProps> = ({
     "inline-flex items-center gap-1.5 font-medium rounded-full tracking-wide";
 
   const variants = {
-    violet: "bg-[#7C3AED]/10 text-[#7C3AED] dark:text-[#EDE9FE] border border-[#7C3AED]/20",
-    plum: "bg-[#211827] text-white border border-white/10",
-    green: "bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20",
-    lavender: "bg-[#EDE9FE] dark:bg-[#7C3AED]/20 text-[#7C3AED] dark:text-[#EDE9FE] border border-[#7C3AED]/20",
-    emergency: "bg-[#DC2626]/10 text-[#DC2626] dark:text-red-400 border border-[#DC2626]/30",
-    neutral: "bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-white/10",
+    violet:
+      "bg-[#A855F7]/10 text-[#7C3AED] dark:text-[#C084FC] border border-[#A855F7]/25",
+    plum:
+      "bg-[#0F0524] text-white border border-[#2D1B4E]",
+    pink:
+      "bg-[#FDE7F3] dark:bg-[#F472B6]/20 text-[#DB2777] dark:text-[#F472B6] border border-[#F472B6]/30",
+    lavender:
+      "bg-[#EDE9FE] dark:bg-[#2D1B4E] text-[#6B46C1] dark:text-[#C084FC] border border-[#A855F7]/20",
+    green:
+      "bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20",
+    emergency:
+      "bg-[#E11D48]/10 text-[#E11D48] dark:text-rose-400 border border-[#E11D48]/30",
+    neutral:
+      "bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-white/10",
   };
 
   const sizes = {

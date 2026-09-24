@@ -42,9 +42,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/brand/Gemini_Generated_Image_cwrx42cwrx42cwrx.png",
+        url: "/brand/her-drive-banner.png",
         width: 1200,
-        height: 1200,
+        height: 600,
         alt: "HERDRIVE — Move Freely. Ride Confidently.",
       },
     ],
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     title: "HERDRIVE — Move Freely. Ride Confidently.",
     description:
       "A women-focused mobility platform built around safety, comfort, trust, and opportunity.",
-    images: ["/brand/Gemini_Generated_Image_cwrx42cwrx42cwrx.png"],
+    images: ["/brand/her-drive-banner.png"],
   },
 };
 
@@ -70,7 +70,7 @@ export default function RootLayout({
       lang="en"
       className={`${manrope.variable} ${inter.variable} scroll-smooth antialiased`}
     >
-      <body className="min-h-screen bg-[#FAF9F7] text-[#242124] dark:bg-[#211827] dark:text-[#FAF9F7] font-sans selection:bg-[#7C3AED] selection:text-white flex flex-col transition-colors duration-300">
+      <body className="min-h-screen bg-[#FAF9F7] text-[#242124] dark:bg-[#0F0524] dark:text-[#FFFAFC] font-sans selection:bg-[#F472B6] selection:text-white flex flex-col transition-colors duration-300">
         <ThemeProvider>
           {children}
         </ThemeProvider>

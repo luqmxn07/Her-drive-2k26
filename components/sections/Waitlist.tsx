@@ -90,19 +90,19 @@ export const Waitlist: React.FC = () => {
   };
 
   return (
-    <section id="waitlist" className="py-20 md:py-28 bg-[#EDE9FE] dark:bg-[#1A1322] relative transition-colors duration-300">
+    <section id="waitlist" className="py-20 md:py-28 bg-gradient-to-b from-[#FFF5F9] via-[#FDE7F3]/70 to-[#FFF5F9] dark:from-[#1E0B3D] dark:via-[#190A2E] dark:to-[#0F0524] relative transition-colors duration-300">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="bg-[#FAF9F7] dark:bg-[#211827] rounded-3xl p-8 sm:p-12 shadow-2xl border border-[#7C3AED]/20 dark:border-white/10 relative overflow-hidden transition-colors duration-300"
+          className="bg-[#FFFAFC] dark:bg-[#1E0B3D] rounded-3xl p-8 sm:p-12 shadow-2xl border border-[#F472B6]/25 dark:border-[#2D1B4E] relative overflow-hidden transition-colors duration-300"
         >
           {/* Header */}
           <div className="text-center space-y-4 max-w-2xl mx-auto mb-10">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EDE9FE] dark:bg-[#7C3AED]/20 text-[#7C3AED] dark:text-[#EDE9FE] text-xs font-bold uppercase tracking-wider border border-[#7C3AED]/20">
-              <Sparkles className="w-3.5 h-3.5" /> Early Access Priority
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FDE7F3] dark:bg-[#2D1B4E] text-[#A855F7] dark:text-[#F472B6] text-xs font-bold uppercase tracking-wider border border-[#F472B6]/25">
+              <Sparkles className="w-3.5 h-3.5 text-[#F472B6]" /> Early Access Priority
             </div>
 
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#242124] dark:text-white font-manrope tracking-tight">
@@ -119,7 +119,7 @@ export const Waitlist: React.FC = () => {
               {/* Name Field */}
               <div className="space-y-1.5">
                 <label htmlFor="waitlist-name" className="text-xs font-bold text-[#242124] dark:text-gray-200 uppercase tracking-wider block">
-                  Full Name <span className="text-[#DC2626]">*</span>
+                  Full Name <span className="text-[#E11D48]">*</span>
                 </label>
                 <input
                   id="waitlist-name"
@@ -128,11 +128,11 @@ export const Waitlist: React.FC = () => {
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className={`w-full px-4 py-3 rounded-xl border ${
-                    errors.name ? "border-[#DC2626] ring-1 ring-[#DC2626]" : "border-gray-300 dark:border-white/15 focus:border-[#7C3AED] focus:ring-2 focus:ring-[#7C3AED]/20"
-                  } bg-white dark:bg-[#17111F] text-[#242124] dark:text-white placeholder-gray-400 dark:placeholder-gray-500 text-sm outline-none transition-all`}
+                    errors.name ? "border-[#E11D48] ring-1 ring-[#E11D48]" : "border-gray-300 dark:border-[#2D1B4E] focus:border-[#F472B6] focus:ring-2 focus:ring-[#F472B6]/20"
+                  } bg-white dark:bg-[#0F0524] text-[#242124] dark:text-white placeholder-gray-400 dark:placeholder-gray-500 text-sm outline-none transition-all`}
                 />
                 {errors.name && (
-                  <p className="text-xs text-[#DC2626] font-medium flex items-center gap-1">
+                  <p className="text-xs text-[#E11D48] font-medium flex items-center gap-1">
                     <AlertCircle className="w-3.5 h-3.5" /> {errors.name}
                   </p>
                 )}
@@ -142,7 +142,7 @@ export const Waitlist: React.FC = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-1.5">
                   <label htmlFor="waitlist-email" className="text-xs font-bold text-[#242124] dark:text-gray-200 uppercase tracking-wider block">
-                    Email Address <span className="text-[#DC2626]">*</span>
+                    Email Address <span className="text-[#E11D48]">*</span>
                   </label>
                   <input
                     id="waitlist-email"
@@ -151,11 +151,11 @@ export const Waitlist: React.FC = () => {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className={`w-full px-4 py-3 rounded-xl border ${
-                      errors.email ? "border-[#DC2626] ring-1 ring-[#DC2626]" : "border-gray-300 dark:border-white/15 focus:border-[#7C3AED] focus:ring-2 focus:ring-[#7C3AED]/20"
-                    } bg-white dark:bg-[#17111F] text-[#242124] dark:text-white placeholder-gray-400 dark:placeholder-gray-500 text-sm outline-none transition-all`}
+                      errors.email ? "border-[#E11D48] ring-1 ring-[#E11D48]" : "border-gray-300 dark:border-[#2D1B4E] focus:border-[#F472B6] focus:ring-2 focus:ring-[#F472B6]/20"
+                    } bg-white dark:bg-[#0F0524] text-[#242124] dark:text-white placeholder-gray-400 dark:placeholder-gray-500 text-sm outline-none transition-all`}
                   />
                   {errors.email && (
-                    <p className="text-xs text-[#DC2626] font-medium flex items-center gap-1">
+                    <p className="text-xs text-[#E11D48] font-medium flex items-center gap-1">
                       <AlertCircle className="w-3.5 h-3.5" /> {errors.email}
                     </p>
                   )}
@@ -171,7 +171,7 @@ export const Waitlist: React.FC = () => {
                     placeholder="+91 98765 43210"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-white/15 focus:border-[#7C3AED] focus:ring-2 focus:ring-[#7C3AED]/20 bg-white dark:bg-[#17111F] text-[#242124] dark:text-white placeholder-gray-400 dark:placeholder-gray-500 text-sm outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-[#2D1B4E] focus:border-[#F472B6] focus:ring-2 focus:ring-[#F472B6]/20 bg-white dark:bg-[#0F0524] text-[#242124] dark:text-white placeholder-gray-400 dark:placeholder-gray-500 text-sm outline-none transition-all"
                   />
                 </div>
               </div>
@@ -187,10 +187,10 @@ export const Waitlist: React.FC = () => {
                       key={r}
                       type="button"
                       onClick={() => setFormData({ ...formData, role: r })}
-                      className={`py-2.5 px-3 rounded-xl text-xs font-bold capitalize transition-all border ${
+                      className={`py-2.5 px-3 rounded-xl text-xs font-bold capitalize transition-all border cursor-pointer ${
                         formData.role === r
-                          ? "bg-[#7C3AED] text-white border-[#7C3AED] shadow-md"
-                          : "bg-white dark:bg-[#17111F] text-[#242124] dark:text-gray-200 border-gray-200 dark:border-white/10 hover:bg-[#EDE9FE] dark:hover:bg-[#7C3AED]/20"
+                          ? "bg-gradient-to-r from-[#A855F7] to-[#F472B6] text-white border-transparent shadow-md"
+                          : "bg-white dark:bg-[#0F0524] text-[#242124] dark:text-gray-200 border-gray-200 dark:border-[#2D1B4E] hover:bg-[#FDE7F3] dark:hover:bg-[#2D1B4E]"
                       }`}
                     >
                       {r}
@@ -206,14 +206,14 @@ export const Waitlist: React.FC = () => {
                     type="checkbox"
                     checked={formData.consent}
                     onChange={(e) => setFormData({ ...formData, consent: e.target.checked })}
-                    className="mt-0.5 w-4 h-4 rounded text-[#7C3AED] focus:ring-[#7C3AED] border-gray-300 cursor-pointer"
+                    className="mt-0.5 w-4 h-4 rounded text-[#F472B6] focus:ring-[#F472B6] border-gray-300 cursor-pointer accent-[#F472B6]"
                   />
                   <span>
                     I consent to the processing of my personal data for early access updates in accordance with India's DPDP Act requirements.
                   </span>
                 </label>
                 {errors.consent && (
-                  <p className="text-xs text-[#DC2626] font-medium flex items-center gap-1">
+                  <p className="text-xs text-[#E11D48] font-medium flex items-center gap-1">
                     <AlertCircle className="w-3.5 h-3.5" /> {errors.consent}
                   </p>
                 )}
@@ -227,7 +227,7 @@ export const Waitlist: React.FC = () => {
                   size="lg"
                   variant="primary"
                   fullWidth
-                  className="gap-2 shadow-lg shadow-[#7C3AED]/25"
+                  className="gap-2 shadow-lg shadow-[#A855F7]/25"
                 >
                   {isSubmitting ? (
                     <>
@@ -261,7 +261,7 @@ export const Waitlist: React.FC = () => {
               </h3>
               <p className="text-sm text-[#6B7280] dark:text-gray-300 leading-relaxed">
                 You've been added to the priority HERDRIVE waitlist as a{" "}
-                <span className="font-bold text-[#7C3AED] dark:text-[#EDE9FE] capitalize">{formData.role}</span>. We will contact you at <span className="font-semibold text-[#242124] dark:text-white">{formData.email}</span> as soon as early access opens in your city.
+                <span className="font-bold text-[#A855F7] dark:text-[#F472B6] capitalize">{formData.role}</span>. We will contact you at <span className="font-semibold text-[#242124] dark:text-white">{formData.email}</span> as soon as early access opens in your city.
               </p>
               <div className="pt-4">
                 <Button

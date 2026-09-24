@@ -3,27 +3,42 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-plum: #211827;
-  --color-plum-dark: #17111F;
-  --color-plum-light: #2D2235;
+  /* Central Brand Palette Tokens derived from HERDRIVE New Icon */
+  /* Primary & Accents */
+  --color-brand-pink: #F472B6;
+  --color-brand-pink-hover: #EC4899;
+  --color-brand-pink-light: #FBCFE8;
+  --color-brand-pink-subtle: #FDE7F3;
+  --color-brand-rose: #FB7185;
+  --color-brand-rose-hover: #F43F5E;
   
-  --color-violet: #7C3AED;
-  --color-violet-hover: #6D28D9;
-  --color-violet-light: #8B5CF6;
-  --color-violet-soft: #F5F3FF;
+  --color-brand-purple: #7C3AED;
+  --color-brand-purple-dark: #6B46C1;
+  --color-brand-purple-light: #A855F7;
+  --color-brand-purple-hover: #6D28D9;
   
-  --color-lavender: #EDE9FE;
-  --color-lavender-dark: #DDD6FE;
-  
-  --color-warm-white: #FAF9F7;
+  --color-brand-lavender: #C084FC;
+  --color-brand-lavender-soft: #EDE9FE;
+  --color-brand-lavender-border: #DDD6FE;
+
+  /* Surfaces & Backgrounds - Light */
+  --color-warm-white: #FFFAFC;
+  --color-warm-base: #FAF9F7;
+  --color-blush-soft: #FFF5F9;
   --color-charcoal: #242124;
-  
-  --color-primary-text: #242124;
-  --color-secondary-text: #6B7280;
-  
-  --color-emergency: #DC2626;
-  --color-emergency-hover: #B91C1C;
-  --color-emergency-light: #FEF2F2;
+  --color-text-muted: #6B7280;
+
+  /* Surfaces & Backgrounds - Dark (Deep Plum & Deep Violet) */
+  --color-plum-night: #0F0524;
+  --color-plum-surface: #1E0B3D;
+  --color-plum-card: #2D1B4E;
+  --color-plum-border: #3E2468;
+  --color-plum-text-muted: #D1C4E9;
+
+  /* Emergency / SOS (Dedicated Safety Red) */
+  --color-emergency: #E11D48;
+  --color-emergency-hover: #BE123C;
+  --color-emergency-light: #FFF1F2;
 
   --font-manrope: var(--font-manrope), sans-serif;
   --font-inter: var(--font-inter), sans-serif;
@@ -32,11 +47,33 @@
 :root {
   --background: #FAF9F7;
   --foreground: #242124;
+  --surface: #FFFFFF;
+  --surface-secondary: #FDE7F3;
+  --surface-blush: #FFF5F9;
+  --primary: #A855F7;
+  --primary-hover: #9333EA;
+  --secondary: #F472B6;
+  --accent: #FB7185;
+  --text-primary: #242124;
+  --text-muted: #6B7280;
+  --border: #F3E8F0;
+  --border-accent: rgba(244, 114, 182, 0.3);
 }
 
 .dark {
-  --background: #211827;
-  --foreground: #FAF9F7;
+  --background: #0F0524;
+  --foreground: #FFFAFC;
+  --surface: #1E0B3D;
+  --surface-secondary: #2D1B4E;
+  --surface-blush: #190A2E;
+  --primary: #7C3AED;
+  --primary-hover: #6D28D9;
+  --secondary: #F472B6;
+  --accent: #FB7185;
+  --text-primary: #FFFAFC;
+  --text-muted: #D1C4E9;
+  --border: #2D1B4E;
+  --border-accent: rgba(244, 114, 182, 0.35);
 }
 
 html {
@@ -51,17 +88,17 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.02em;
 }
 
-/* Custom scrollbar styling */
+/* Custom scrollbar styling in brand colors */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #211827;
+  background: #0F0524;
 }
 ::-webkit-scrollbar-thumb {
-  background: #7C3AED;
+  background: linear-gradient(180deg, #A855F7, #F472B6);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #8B5CF6;
+  background: linear-gradient(180deg, #7C3AED, #EC4899);
 }

@@ -22,10 +22,10 @@ export const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="relative pt-28 sm:pt-36 pb-20 md:pb-28 overflow-hidden bg-gradient-to-b from-[#EDE9FE]/50 via-[#FAF9F7] to-[#FAF9F7] dark:from-[#211827] dark:via-[#1A1322] dark:to-[#17111F] transition-colors duration-300"
+      className="relative pt-28 sm:pt-36 pb-20 md:pb-28 overflow-hidden bg-gradient-to-b from-[#FFF5F9] via-[#FDE7F3]/40 to-[#FAF9F7] dark:from-[#0F0524] dark:via-[#1E0B3D]/70 dark:to-[#0F0524] transition-colors duration-300"
     >
-      {/* Decorative background glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#7C3AED]/10 blur-[130px] rounded-full pointer-events-none" />
+      {/* Decorative brand ambient glow */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-gradient-to-br from-[#F472B6]/15 to-[#A855F7]/15 blur-[150px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -37,17 +37,17 @@ export const Hero: React.FC = () => {
             className="lg:col-span-7 space-y-6 sm:space-y-8 text-center lg:text-left"
           >
             {/* Top Pill Announcement */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#EDE9FE] dark:bg-[#7C3AED]/20 text-[#7C3AED] dark:text-[#EDE9FE] border border-[#7C3AED]/25 shadow-xs text-xs sm:text-sm font-bold tracking-wide">
-              <Sparkles className="w-4 h-4 text-[#7C3AED]" />
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FDE7F3] dark:bg-[#1E0B3D] text-[#A855F7] dark:text-[#F472B6] border border-[#F472B6]/30 shadow-xs text-xs sm:text-sm font-bold tracking-wide">
+              <Sparkles className="w-4 h-4 text-[#F472B6]" />
               <span>Next-Gen Women Mobility Platform</span>
-              <span className="w-1.5 h-1.5 rounded-full bg-[#7C3AED]" />
-              <span className="text-[#211827] dark:text-gray-200">Launching Soon</span>
+              <span className="w-1.5 h-1.5 rounded-full bg-[#F472B6]" />
+              <span className="text-[#242124] dark:text-gray-200">Launching Soon</span>
             </div>
 
             {/* Main Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#242124] dark:text-white tracking-tight font-manrope leading-[1.15]">
               Move Freely. <br className="hidden sm:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7C3AED] to-[#5B21B6]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7C3AED] via-[#A855F7] to-[#F472B6]">
                 Ride Confidently.
               </span>
             </h1>
@@ -60,7 +60,7 @@ export const Hero: React.FC = () => {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
               <a href="#waitlist" className="w-full sm:w-auto">
-                <Button size="lg" variant="primary" fullWidth className="gap-2 shadow-lg shadow-[#7C3AED]/25">
+                <Button size="lg" variant="primary" fullWidth className="gap-2 shadow-lg shadow-[#A855F7]/25">
                   Join the Waitlist
                   <ArrowRight className="w-5 h-5" />
                 </Button>
@@ -76,15 +76,15 @@ export const Hero: React.FC = () => {
             {/* Trust Badges */}
             <div className="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-y-2 gap-x-6 text-xs sm:text-sm font-semibold text-[#6B7280] dark:text-gray-400">
               <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-[#7C3AED]" />
+                <CheckCircle2 className="w-4 h-4 text-[#F472B6]" />
                 Launching soon
               </span>
               <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-[#7C3AED]" />
+                <CheckCircle2 className="w-4 h-4 text-[#F472B6]" />
                 Technology-enabled safety
               </span>
               <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-[#7C3AED]" />
+                <CheckCircle2 className="w-4 h-4 text-[#F472B6]" />
                 Verified women drivers
               </span>
             </div>
@@ -100,25 +100,25 @@ export const Hero: React.FC = () => {
             {/* Phone Mockup Frame */}
             <PhoneMockup headerTitle="HERDRIVE Ride">
               {/* Map View Canvas (Conceptual SVG Map) */}
-              <div className="relative h-64 sm:h-72 w-full bg-[#211827] overflow-hidden">
+              <div className="relative h-64 sm:h-72 w-full bg-[#0F0524] overflow-hidden">
                 {/* Simulated Map Grid / Roads SVG */}
                 <svg
-                  className="absolute inset-0 w-full h-full opacity-30"
+                  className="absolute inset-0 w-full h-full opacity-35"
                   xmlns="http://www.w3.org/2000/svg"
                   width="100%"
                   height="100%"
                 >
                   <defs>
                     <pattern id="hero-grid" width="36" height="36" patternUnits="userSpaceOnUse">
-                      <path d="M 36 0 L 0 0 0 36" fill="none" stroke="#7C3AED" strokeWidth="0.5" />
+                      <path d="M 36 0 L 0 0 0 36" fill="none" stroke="#2D1B4E" strokeWidth="0.8" />
                     </pattern>
                   </defs>
                   <rect width="100%" height="100%" fill="url(#hero-grid)" />
-                  {/* Route Polyline */}
+                  {/* Brand Curving Road Polyline matching the Logo */}
                   <path
                     d="M 50 200 Q 120 120 220 140 T 320 60"
                     fill="none"
-                    stroke="#7C3AED"
+                    stroke="#F472B6"
                     strokeWidth="4"
                     strokeDasharray="6 4"
                   />
@@ -126,38 +126,38 @@ export const Hero: React.FC = () => {
 
                 {/* Live Status Floating Shield */}
                 <div className="absolute top-3 left-3 right-3 flex items-center justify-between z-10">
-                  <Badge variant="plum" icon={<ShieldCheck className="w-3.5 h-3.5 text-[#7C3AED]" />}>
+                  <Badge variant="plum" icon={<ShieldCheck className="w-3.5 h-3.5 text-[#F472B6]" />}>
                     Safety Active
                   </Badge>
-                  <Badge variant="violet" icon={<Lock className="w-3.5 h-3.5" />}>
+                  <Badge variant="pink" icon={<Lock className="w-3.5 h-3.5 text-[#F472B6]" />}>
                     PIN: 4912
                   </Badge>
                 </div>
 
                 {/* Pickup & Destination Pins */}
-                <div className="absolute top-12 left-8 flex items-center gap-1.5 bg-[#211827]/90 text-white text-[11px] px-2.5 py-1 rounded-full border border-white/20 shadow-md">
+                <div className="absolute top-12 left-8 flex items-center gap-1.5 bg-[#1E0B3D]/95 text-white text-[11px] px-2.5 py-1 rounded-full border border-[#2D1B4E] shadow-md">
                   <MapPin className="w-3.5 h-3.5 text-emerald-400" />
                   <span>Koramangala 5th Block</span>
                 </div>
 
-                <div className="absolute bottom-16 right-6 flex items-center gap-1.5 bg-[#7C3AED] text-white text-[11px] px-2.5 py-1 rounded-full border border-white/20 shadow-lg">
+                <div className="absolute bottom-16 right-6 flex items-center gap-1.5 bg-gradient-to-r from-[#A855F7] to-[#F472B6] text-white text-[11px] px-2.5 py-1 rounded-full border border-white/20 shadow-lg">
                   <Navigation className="w-3.5 h-3.5 text-white" />
                   <span>Indiranagar Metro</span>
                 </div>
 
                 {/* Moving Driver Vehicle Pin */}
-                <div className="absolute top-28 left-40 transform -translate-x-1/2 -translate-y-1/2 p-2 rounded-full bg-[#211827] border-2 border-[#7C3AED] shadow-xl text-white animate-pulse">
-                  <Car className="w-4 h-4 text-[#7C3AED]" />
+                <div className="absolute top-28 left-40 transform -translate-x-1/2 -translate-y-1/2 p-2 rounded-full bg-[#1E0B3D] border-2 border-[#F472B6] shadow-xl text-white animate-pulse">
+                  <Car className="w-4 h-4 text-[#F472B6]" />
                 </div>
               </div>
 
               {/* Driver & Ride Details Bottom Drawer */}
-              <div className="p-4 bg-white text-[#242124] space-y-3.5 border-t border-gray-100 flex-1">
+              <div className="p-4 bg-[#FFFAFC] text-[#242124] space-y-3.5 border-t border-gray-100 flex-1">
                 {/* Verified Driver Info Card */}
-                <div className="p-3 rounded-2xl bg-[#EDE9FE]/50 border border-[#7C3AED]/20 flex items-center justify-between">
+                <div className="p-3 rounded-2xl bg-[#FFF5F9] border border-[#F472B6]/25 flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <div className="relative">
-                      <div className="w-11 h-11 rounded-full bg-[#211827] text-white flex items-center justify-center font-bold text-sm border-2 border-[#7C3AED]">
+                      <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[#7C3AED] to-[#F472B6] text-white flex items-center justify-center font-bold text-sm border-2 border-white shadow-xs">
                         PS
                       </div>
                       <span className="absolute -bottom-0.5 -right-0.5 w-4 h-4 rounded-full bg-emerald-500 border-2 border-white flex items-center justify-center text-[9px] text-white">
@@ -167,7 +167,7 @@ export const Hero: React.FC = () => {
 
                     <div>
                       <div className="flex items-center gap-1.5">
-                        <h4 className="font-bold text-sm text-[#211827]">Priya S.</h4>
+                        <h4 className="font-bold text-sm text-[#242124]">Priya S.</h4>
                         <span className="inline-flex items-center gap-0.5 text-xs font-semibold text-amber-700 bg-amber-50 px-1.5 py-0.2 rounded border border-amber-200">
                           <Star className="w-3 h-3 fill-amber-400 text-amber-400" /> 5.0
                         </span>
@@ -178,8 +178,8 @@ export const Hero: React.FC = () => {
                     </div>
                   </div>
 
-                  <button className="p-2 rounded-xl bg-white border border-[#7C3AED]/30 text-[#7C3AED] hover:bg-[#7C3AED] hover:text-white transition-colors" aria-label="Call driver">
-                    <PhoneCall className="w-4 h-4" />
+                  <button className="p-2 rounded-xl bg-white border border-[#F472B6]/30 text-[#A855F7] hover:bg-[#FDE7F3] transition-colors" aria-label="Call driver">
+                    <PhoneCall className="w-4 h-4 text-[#F472B6]" />
                   </button>
                 </div>
 
@@ -187,7 +187,7 @@ export const Hero: React.FC = () => {
                 <div className="grid grid-cols-3 gap-2 text-center text-xs">
                   <div className="p-2 rounded-xl bg-[#FAF9F7] border border-gray-200/70">
                     <span className="text-[10px] text-[#6B7280] block">ETA</span>
-                    <span className="font-bold text-[#211827]">3 mins</span>
+                    <span className="font-bold text-[#242124]">3 mins</span>
                   </div>
                   <div className="p-2 rounded-xl bg-[#FAF9F7] border border-gray-200/70">
                     <span className="text-[10px] text-[#6B7280] block">Safety Check</span>
@@ -195,17 +195,17 @@ export const Hero: React.FC = () => {
                   </div>
                   <div className="p-2 rounded-xl bg-[#FAF9F7] border border-gray-200/70">
                     <span className="text-[10px] text-[#6B7280] block">Ride PIN</span>
-                    <span className="font-mono font-bold text-[#7C3AED]">4912</span>
+                    <span className="font-mono font-bold text-[#A855F7]">4912</span>
                   </div>
                 </div>
 
                 {/* Live Trip Share indicator */}
-                <div className="px-3 py-2 rounded-xl bg-[#211827] text-white flex items-center justify-between text-xs font-medium">
+                <div className="px-3 py-2 rounded-xl bg-[#0F0524] text-white flex items-center justify-between text-xs font-medium">
                   <span className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
                     Auto-Share Trip: Mom & Roommate
                   </span>
-                  <span className="text-[10px] text-[#EDE9FE] underline">ON</span>
+                  <span className="text-[10px] text-[#F472B6] font-bold underline">ON</span>
                 </div>
               </div>
             </PhoneMockup>

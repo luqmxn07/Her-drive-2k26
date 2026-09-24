@@ -11,8 +11,6 @@ import {
   AlertTriangle,
   UserCheck,
   Share2,
-  Lock,
-  Star,
   CheckCircle2,
 } from "lucide-react";
 import { SOSSlider } from "@/components/ui/SOSSlider";
@@ -58,21 +56,21 @@ export const Safety: React.FC = () => {
   ];
 
   return (
-    <section id="safety" className="py-20 md:py-28 bg-[#211827] text-white relative overflow-hidden">
-      {/* Background ambient glow */}
-      <div className="absolute top-1/3 left-0 w-96 h-96 bg-[#7C3AED]/20 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-10 right-0 w-96 h-96 bg-[#DC2626]/10 rounded-full blur-[140px] pointer-events-none" />
+    <section id="safety" className="py-20 md:py-28 bg-[#0F0524] text-white relative overflow-hidden border-t border-[#2D1B4E]">
+      {/* Background ambient glow in deep plum and pink highlights */}
+      <div className="absolute top-1/3 left-0 w-96 h-96 bg-[#7C3AED]/15 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute bottom-10 right-0 w-96 h-96 bg-[#F472B6]/10 rounded-full blur-[150px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span className="text-xs font-bold tracking-widest text-[#EDE9FE] uppercase bg-white/10 px-3.5 py-1.5 rounded-full border border-white/20">
+          <span className="text-xs font-bold tracking-widest text-[#F472B6] uppercase bg-[#1E0B3D] px-3.5 py-1.5 rounded-full border border-[#2D1B4E]">
             Layered Protection
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white font-manrope tracking-tight">
             Safety Is a System, Not a Single Feature.
           </h2>
-          <p className="text-base sm:text-lg text-gray-300">
+          <p className="text-base sm:text-lg text-[#D1C4E9]">
             We don't rely on gimmicks or empty promises. HERDRIVE implements a rigorous 3-stage operational model active throughout the entire ride lifecycle.
           </p>
         </div>
@@ -91,18 +89,18 @@ export const Safety: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden transition-all duration-300"
+                  className="rounded-2xl border border-[#2D1B4E] bg-[#1E0B3D]/70 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:border-[#F472B6]/40"
                 >
                   <button
                     onClick={() => setActiveTab(isOpen ? -1 : index)}
-                    className="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none focus:ring-2 focus:ring-[#7C3AED] rounded-2xl"
+                    className="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none focus:ring-2 focus:ring-[#F472B6] rounded-2xl"
                   >
                     <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-[#7C3AED]/20 text-[#EDE9FE] flex items-center justify-center font-bold shrink-0 border border-[#7C3AED]/30">
-                        <IconComponent className="w-6 h-6 text-[#7C3AED]" />
+                      <div className="w-12 h-12 rounded-xl bg-[#2D1B4E] text-[#F472B6] flex items-center justify-center font-bold shrink-0 border border-[#F472B6]/30">
+                        <IconComponent className="w-6 h-6 text-[#F472B6]" />
                       </div>
                       <div>
-                        <span className="text-xs font-bold text-[#7C3AED] uppercase tracking-wider block">
+                        <span className="text-xs font-bold text-[#F472B6] uppercase tracking-wider block">
                           {stageItem.stage}
                         </span>
                         <h3 className="text-lg sm:text-xl font-bold text-white font-manrope">
@@ -112,15 +110,15 @@ export const Safety: React.FC = () => {
                     </div>
 
                     <div className="text-gray-400">
-                      {isOpen ? <ChevronUp className="w-5 h-5 text-[#7C3AED]" /> : <ChevronDown className="w-5 h-5" />}
+                      {isOpen ? <ChevronUp className="w-5 h-5 text-[#F472B6]" /> : <ChevronDown className="w-5 h-5" />}
                     </div>
                   </button>
 
                   {isOpen && (
-                    <div className="px-6 pb-6 pt-2 border-t border-white/10 space-y-3 animate-in fade-in duration-200">
+                    <div className="px-6 pb-6 pt-2 border-t border-[#2D1B4E] space-y-3 animate-in fade-in duration-200">
                       {stageItem.items.map((bullet, i) => (
-                        <div key={i} className="flex items-start gap-3 text-sm text-gray-200">
-                          <CheckCircle2 className="w-4 h-4 text-[#7C3AED] shrink-0 mt-0.5" />
+                        <div key={i} className="flex items-start gap-3 text-sm text-[#D1C4E9]">
+                          <CheckCircle2 className="w-4 h-4 text-[#F472B6] shrink-0 mt-0.5" />
                           <span>{bullet}</span>
                         </div>
                       ))}
@@ -131,7 +129,7 @@ export const Safety: React.FC = () => {
             })}
 
             {/* Disclaimer Box */}
-            <div className="p-4 rounded-xl bg-white/5 border border-white/10 text-xs text-gray-400 space-y-1">
+            <div className="p-4 rounded-xl bg-[#1E0B3D]/50 border border-[#2D1B4E] text-xs text-gray-400 space-y-1">
               <p className="font-semibold text-gray-300 flex items-center gap-1.5">
                 <AlertTriangle className="w-4 h-4 text-amber-400" />
                 Operational & Safety Standards
@@ -144,11 +142,11 @@ export const Safety: React.FC = () => {
 
           {/* Right Column: Safety Operations Center UI Container */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="rounded-3xl p-6 bg-slate-900 border border-white/15 shadow-2xl space-y-6">
+            <div className="rounded-3xl p-6 bg-[#1E0B3D] border border-[#2D1B4E] shadow-2xl space-y-6">
               {/* Top Header */}
-              <div className="flex items-center justify-between border-b border-gray-800 pb-4">
+              <div className="flex items-center justify-between border-b border-[#2D1B4E] pb-4">
                 <div className="flex items-center gap-2">
-                  <ShieldCheck className="w-5 h-5 text-[#7C3AED]" />
+                  <ShieldCheck className="w-5 h-5 text-[#F472B6]" />
                   <span className="font-bold text-sm text-white font-manrope">
                     Safety Center UI Mockup
                   </span>
@@ -158,30 +156,30 @@ export const Safety: React.FC = () => {
 
               {/* Status Pills */}
               <div className="grid grid-cols-2 gap-3 text-xs">
-                <div className="p-3 rounded-xl bg-slate-800 border border-slate-700/60 flex flex-col gap-1">
+                <div className="p-3 rounded-xl bg-[#0F0524] border border-[#2D1B4E] flex flex-col gap-1">
                   <span className="text-[10px] text-gray-400">Route Status</span>
                   <span className="font-bold text-emerald-400 flex items-center gap-1">
                     <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                     On Route
                   </span>
                 </div>
-                <div className="p-3 rounded-xl bg-slate-800 border border-slate-700/60 flex flex-col gap-1">
+                <div className="p-3 rounded-xl bg-[#0F0524] border border-[#2D1B4E] flex flex-col gap-1">
                   <span className="text-[10px] text-gray-400">Emergency Contacts</span>
                   <span className="font-bold text-white flex items-center gap-1">
-                    <Share2 className="w-3.5 h-3.5 text-[#7C3AED]" /> 2 Synced
+                    <Share2 className="w-3.5 h-3.5 text-[#F472B6]" /> 2 Synced
                   </span>
                 </div>
               </div>
 
-              {/* Interactive Emergency SOS Slider (#DC2626) */}
+              {/* Interactive Emergency SOS Slider (#E11D48) */}
               <SOSSlider />
 
               {/* Verified Features Box */}
-              <div className="p-4 rounded-xl bg-[#7C3AED]/10 border border-[#7C3AED]/30 space-y-2">
-                <span className="text-xs font-bold text-[#EDE9FE] uppercase tracking-wider block">
+              <div className="p-4 rounded-xl bg-[#2D1B4E]/60 border border-[#F472B6]/30 space-y-2">
+                <span className="text-xs font-bold text-[#F472B6] uppercase tracking-wider block">
                   Safety System Features
                 </span>
-                <ul className="text-xs text-gray-300 space-y-1.5">
+                <ul className="text-xs text-[#D1C4E9] space-y-1.5">
                   <li>• Mandatory 4-Digit Ride PIN before vehicle moves</li>
                   <li>• Real-time route deviation detection and alerts</li>
                   <li>• Instant emergency escalation and support line</li>

@@ -4,7 +4,39 @@ All notable changes to the HERDRIVE platform are documented in this file.
 
 ## 2026-09-24
 
-### feat: implement live Neon PostgreSQL and Upstash Redis waitlist API integration
+### feat: update HERDRIVE frontend with new brand identity
+
+Time: 22:42 IST
+
+Changes:
+- **New Brand Asset Integration**: Replaced legacy shield and purple-only icons with the official HERDRIVE brand assets from `icons/`:
+  - `public/brand/her-drive-light.png`: Light theme emblem badge (stylized woman silhouette "H", curved road to "D", pink pin marker, heart accent, "Safe Rides • Women First")
+  - `public/brand/her-drive-dark.png`: Dark theme counterpart with glowing rim and deep plum backdrop
+  - `public/brand/her-drive-banner.png`: Social share banner & brand reference guide
+  - Synced `favicon.png` and `apple-touch-icon.png` with official new brand asset
+- **Centralized Brand Token System**: Derived and configured the complete color system in `app/globals.css`:
+  - Soft Pink (`#F472B6`, `#FBCFE8`, `#FDE7F3`)
+  - Rose Pink (`#FB7185`, `#F43F5E`)
+  - Purple & Mauve (`#7C3AED`, `#A855F7`, `#6B46C1`)
+  - Lavender (`#C084FC`, `#EDE9FE`)
+  - Deep Plum Background & Surfaces (`#0F0524`, `#1E0B3D`, `#2D1B4E`)
+  - Warm White Surfaces (`#FFFAFC`, `#FAF9F7`)
+  - Dedicated Emergency Red (`#E11D48`, `#DC2626`)
+- **Full Landing Page Section Refresh**:
+  - **Navbar**: Light/Dark dynamic logo switching, refined glassmorphism, pink-purple gradient CTA.
+  - **Hero**: Gradient headline on *"Ride Confidently."*, soft pink/lavender backdrop, pink route mockup.
+  - **Problem**: Warm white surfaces with pink/lavender category pills and mauve icons.
+  - **Solution**: 4 pillars redesigned with gradient icon badges and subtle pink accents.
+  - **How It Works**: 5-step numbered indicators with pink gradient connecting timeline.
+  - **Safety**: Deep plum & deep violet operational safety suite with `#E11D48` SOS slider.
+  - **Passenger App Mockup**: Cohesive in-app experience featuring pink route, standard/premium tiers, and PIN security.
+  - **Driver App Mockup**: Dark plum ecosystem app with multi-stop dispatch, earnings card, and safety controls.
+  - **Technology**: Deep plum & violet architecture flow diagram with refined platform engine card.
+  - **Community**: Value cards aligned with pink/lavender brand accents.
+  - **Waitlist**: Soft blush backdrop, warm white form card, gradient role pills, and DPDP consent.
+  - **Footer**: Deep plum footer with official dark logo, pink tagline, and social links.
+- **QA & Testing**: Verified clean production build (`npm run build`) with Turbopack, and conducted browser testing across light/dark themes and desktop/mobile viewports.
+
 
 Time: 20:48 IST
 

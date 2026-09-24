@@ -24,19 +24,19 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const baseStyles =
-      "inline-flex items-center justify-center font-medium rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#7C3AED] min-h-[44px] min-w-[44px] cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none select-none";
+      "inline-flex items-center justify-center font-medium rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#F472B6] min-h-[44px] min-w-[44px] cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none select-none";
 
     const variants = {
       primary:
-        "bg-[#7C3AED] text-white hover:bg-[#6D28D9] hover:-translate-y-0.5 shadow-md hover:shadow-lg active:translate-y-0",
+        "bg-gradient-to-r from-[#A855F7] via-[#9333EA] to-[#F472B6] hover:from-[#9333EA] hover:via-[#7C3AED] hover:to-[#EC4899] text-white hover:-translate-y-0.5 shadow-md shadow-[#A855F7]/25 hover:shadow-lg hover:shadow-[#F472B6]/30 active:translate-y-0",
       secondary:
-        "bg-transparent border-2 border-[#7C3AED] text-[#7C3AED] hover:bg-[#EDE9FE] dark:hover:bg-[#7C3AED]/20 hover:-translate-y-0.5 active:translate-y-0",
+        "bg-transparent border-2 border-[#A855F7] text-[#7C3AED] dark:text-[#F472B6] dark:border-[#F472B6] hover:bg-[#FDE7F3] dark:hover:bg-[#1E0B3D] hover:-translate-y-0.5 active:translate-y-0",
       outline:
-        "bg-white/90 dark:bg-white/10 backdrop-blur-sm border border-[#211827]/15 dark:border-white/15 text-[#242124] dark:text-white hover:bg-[#EDE9FE]/50 dark:hover:bg-white/15 hover:border-[#7C3AED] hover:-translate-y-0.5",
+        "bg-white/90 dark:bg-[#1E0B3D]/80 backdrop-blur-sm border border-gray-200 dark:border-[#2D1B4E] text-[#242124] dark:text-[#FFFAFC] hover:bg-[#FDE7F3]/50 dark:hover:bg-[#2D1B4E] hover:border-[#F472B6] hover:-translate-y-0.5",
       emergency:
-        "bg-[#DC2626] text-white hover:bg-[#B91C1C] hover:-translate-y-0.5 shadow-md shadow-red-900/20 hover:shadow-red-900/40 active:translate-y-0",
+        "bg-[#E11D48] text-white hover:bg-[#BE123C] hover:-translate-y-0.5 shadow-md shadow-rose-900/20 hover:shadow-rose-900/40 active:translate-y-0",
       ghost:
-        "bg-transparent text-[#242124] dark:text-white hover:bg-[#EDE9FE]/60 dark:hover:bg-white/10 hover:text-[#7C3AED]",
+        "bg-transparent text-[#242124] dark:text-[#FFFAFC] hover:bg-[#FDE7F3] dark:hover:bg-[#1E0B3D] hover:text-[#7C3AED] dark:hover:text-[#F472B6]",
     };
 
     const sizes = {
