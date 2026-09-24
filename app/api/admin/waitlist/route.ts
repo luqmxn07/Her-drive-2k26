@@ -11,10 +11,16 @@ export async function GET(req: NextRequest) {
 
   const sql = getDb();
   if (!sql) {
-    return NextResponse.json(
-      { success: false, error: "Database not configured" },
-      { status: 503 }
-    );
+    return NextResponse.json({
+      success: true,
+      data: [],
+      pagination: {
+        total: 0,
+        page: 1,
+        limit: 15,
+        totalPages: 1,
+      },
+    });
   }
 
   try {

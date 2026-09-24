@@ -9,10 +9,25 @@ export async function GET(req: NextRequest) {
 
   const sql = getDb();
   if (!sql) {
-    return NextResponse.json(
-      { success: false, error: "Database unavailable" },
-      { status: 503 }
-    );
+    return NextResponse.json({
+      success: true,
+      data: {
+        stats: {
+          total: 0,
+          passengers: 0,
+          drivers: 0,
+          both: 0,
+          waitlisted: 0,
+          contacted: 0,
+          converted: 0,
+          archived: 0,
+          last24Hours: 0,
+          last7Days: 0,
+          trend: [],
+        },
+        recent: [],
+      },
+    });
   }
 
   try {

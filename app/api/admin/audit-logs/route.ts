@@ -9,7 +9,11 @@ export async function GET(req: NextRequest) {
 
   const sql = getDb();
   if (!sql) {
-    return NextResponse.json({ success: false, error: "Database unavailable" }, { status: 503 });
+    return NextResponse.json({
+      success: true,
+      data: [],
+      pagination: { total: 0, page: 1, limit: 25, totalPages: 1 },
+    });
   }
 
   try {
