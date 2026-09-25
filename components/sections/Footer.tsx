@@ -37,7 +37,9 @@ export const Footer: React.FC = () => {
             {/* Social Icons */}
             <div className="flex items-center gap-3 pt-2">
               <a
-                href="#"
+                href="https://www.instagram.com/herdrive.co?stkn=ZHV5ajZnY2JiejE4&utm_source=qr"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-300 hover:text-[#F472B6] hover:border-[#F472B6] transition-colors"
                 aria-label="Instagram"
               >
