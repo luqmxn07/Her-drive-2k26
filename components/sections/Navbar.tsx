@@ -53,11 +53,11 @@ export const Navbar: React.FC = () => {
           >
             <div className="w-10 h-10 rounded-xl overflow-hidden shadow-md ring-1 ring-[#F472B6]/40 group-hover:scale-105 transition-transform duration-200 shrink-0 bg-transparent">
               <Image
-                src={theme === "dark" ? "/brand/her-drive-dark.png" : "/brand/her-drive-light.png"}
+                src={theme === "dark" ? "/brand/her-drive-dark.png" : "/brand/webpage-logo.png"}
                 alt="HERDRIVE Logo"
                 width={40}
                 height={40}
-                className="w-full h-full object-cover transition-opacity duration-300"
+                className="w-full h-full object-contain p-0.5 transition-opacity duration-300"
                 priority
               />
             </div>
